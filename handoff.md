@@ -11,6 +11,10 @@
 - Google Driveは資料保管、GitHubは作業ログと引き継ぎ台帳として使う
 - ノートPCにGitHub Desktopを導入し、`mikami-operations` をクローン済み
 - ローカル保存先: `/Users/tomoya/Documents/GitHub/mikami-operations`
+- 端末ニックネームを設定
+  - デスクトップPC: Alf / アルフ / Alfred / アルフレッド
+  - ノートPC: Fay / フェイ / Friday
+- Alfでは作業後に `handoff.md` 更新、commit、可能ならpushまで行う運用を標準化
 
 ## 次にやること
 
