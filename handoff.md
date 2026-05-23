@@ -9,6 +9,7 @@
 - GitHubリポジトリ `mikami-operations` を作成済み
 - まずは無料プラン・Privateリポジトリで運用開始
 - Google Driveは資料保管、GitHubは作業ログと引き継ぎ台帳として使う
+- 今後はこのリポジトリを、ノートPC・デスクトップPC・スマホ・Codex・Claude間の共通作業台として使う
 - ノートPCにGitHub Desktopを導入し、`mikami-operations` をクローン済み
 - ローカル保存先: `/Users/tomoya/Documents/GitHub/mikami-operations`
 
