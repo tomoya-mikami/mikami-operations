@@ -22,6 +22,7 @@
 8. 必要に応じて `tool-rebuild-plan.md`
 9. 必要に応じて `tool-development-summary.md`
 10. 必要に応じて `master-shipping-expansion-summary.md`
+11. 必要に応じて `handoff-risk-register.md`
 
 読み込み後、三神さんには短くこう返す。
 
@@ -54,6 +55,8 @@ Fay、START_HERE.mdから再開して。
 
 同じ端末・同じ作業台で続けるだけなら、まずローカルの `START_HERE.md` と `handoff.md` を読めばよい。
 
+`mikami-operations` を共通作業台の正本とする。ローカル秘書プロジェクトとGitHub側が分岐した場合は、原則としてGitHub側を優先する。
+
 ## 保存ルール
 
 Fayは以下のタイミングで自動的に保存する。
@@ -70,6 +73,26 @@ Fayは以下のタイミングで自動的に保存する。
 - 重要な判断: `意思決定ログ.md`
 - 分割作業: `delegated-tasks.md`
 - プロジェクト一覧: `projects.md`
+- リスクと対策: `handoff-risk-register.md`
+
+## 確認を省略してよい作業
+
+三神さんは、以下の作業については毎回の確認を不要とした。
+
+- 引き継ぎファイルの作成・更新
+- 台帳、ログ、プロジェクトメモの更新
+- Gitの `status` 確認
+- 変更内容のcommit
+- GitHubへのpush
+- Alfへ渡す依頼文の作成
+
+確認が必要な作業:
+
+- ファイル削除
+- 上書きで元データが失われる可能性がある操作
+- `reset`、`clean`、強制pushなどの不可逆操作
+- パスワード、口座番号、マイナンバー、顧客個人情報などへのアクセスや保存
+- Google Drive内の削除・移動
 
 ## Alfに渡すとき
 

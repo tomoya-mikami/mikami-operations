@@ -73,6 +73,7 @@ Fayが記録すること:
 - 分割した仕事・アルフや別チャットへの依頼: `delegated-tasks.md`
 - ツールの棚卸し・残す/統合/保留/廃止判断: `tool-inventory.md`
 - 再構築方針: `tool-rebuild-plan.md`
+- 引き継ぎリスクと対策: `handoff-risk-register.md`
 
 毎回GitHub同期を必須にはしない。同じ端末・同じ作業台で続ける場合は、まずローカルの `START_HERE.md` と `handoff.md` を読む。
 
@@ -82,6 +83,11 @@ GitHub同期が必要なタイミング:
 - Fayが作業してAlfに渡す前
 - ノートPC、デスクトップPC、スマホなど端末をまたぐとき
 - 重要な引き継ぎファイルを更新したとき
+
+正本:
+
+- `mikami-operations` を共通作業台の正本にする。
+- ローカル秘書プロジェクトとGitHub側が分岐した場合は、原則GitHub側を優先する。
 
 ## 早めに引き継ぎ更新するタイミング
 
@@ -118,6 +124,7 @@ GitHub同期が必要なタイミング:
 9. 必要に応じて `tool-rebuild-plan.md`
 10. 必要に応じて `tool-development-summary.md`
 11. 必要に応じて `master-shipping-expansion-summary.md`
+12. 必要に応じて `handoff-risk-register.md`
 
 次スレッドに貼る最小文:
 
@@ -200,6 +207,7 @@ GitHub共通作業台から再開する場合の最小文:
 - `tool-development-summary.md`
 - `master-shipping-expansion-summary.md`
 - `alf-test-request.md`
+- `handoff-risk-register.md`
 
 Alf依頼テスト:
 
@@ -207,6 +215,12 @@ Alf依頼テスト:
 - この環境からデスクトップPC側Alfへ直接接続はできない。
 - 代替として、同じ依頼形式をサブエージェントに渡して、依頼フローが成立するか確認する。
 - テスト結果: 依頼形式は成立。実際のAlfへ渡す場合は、作業場所 `/Users/mikami/Documents/GitHub/mikami-operations-official` を明記する。
+
+CLI認証:
+
+- 2026-05-23、ノートPC側にGitHub CLI `gh` をインストール。
+- `gh auth login --hostname github.com --git-protocol https --web` で `tomoya-mikami` として認証済み。
+- `git push origin main` はCLIから実行可能。
 
 ## 最新の決定
 
@@ -217,6 +231,9 @@ Alf依頼テスト:
 - 三神さんが「アルフでやって」「Alfで進めて」と言った場合は、デスクトップPC側Codexが正式作業台で作業する。
 - Alfでは、作業後に `handoff.md` 更新、commit、可能ならpushまで行う。
 - Alf初回セットアップと毎回の作業依頼には `desktop-codex-prompt.md` を使う。
+- 引き継ぎリスクと対策は `handoff-risk-register.md` に保存する。
+- 安全な保存・台帳更新・commit/pushは、毎回確認せずFayが進めてよい。
+- 確認が必要なのは、削除、不可逆操作、個人情報/機密情報へのアクセスや保存、Google Drive内の削除・移動。
 
 ## 注意点
 

@@ -45,6 +45,8 @@
 | T-006 | GitHub共通作業台 / Alf・Fay運用 | Fay / Alf / GitHub | 進行中 | 複数端末・複数AI間で作業ログと成果物を迷子にしない | `mikami-operations`, `handoff.md`, `desktop-codex-prompt.md` | Alf側で `desktop-codex-prompt.md` を読み込み、commit/push運用をテストする | 反映済 |
 | T-007 | Alf依頼フローテスト | Fay / Alf代替サブエージェント | 完了 | FayからAlfへ依頼する形式が成立するか確認する | `alf-test-request.md` | 実際のAlfへ渡す場合は作業場所を明記して依頼する | 済 |
 | T-008 | 新チャット起動プロトコル | Fay | 完了 | 毎回長い設定を貼らずにFayとして再開できるようにする | `START_HERE.md`, `AGENTS.md`, `handoff.md` | 新チャットでは「Fay、START_HERE.mdから再開して。」だけで再開する | 済 |
+| T-009 | CLI認証・引き継ぎリスク対策 | Fay | 完了 | CLI pushを可能にし、複数端末運用のリスクと対策を整理する | `handoff-risk-register.md`, `handoff.md`, `意思決定ログ.md` | 以後、端末間作業ではリスク台帳の標準チェックリストを使う | 済 |
+| T-010 | 安全作業の確認省略ルール | Fay | 完了 | 保存・commit/pushのたびに確認せず、スムーズに進める | `START_HERE.md`, `handoff.md`, `意思決定ログ.md` | 削除・不可逆操作・機密情報関連だけ確認する | 済 |
 
 ## 未整理メモ
 
