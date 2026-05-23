@@ -1,6 +1,6 @@
 # START_HERE
 
-最終更新: 2026-05-23
+最終更新: 2026-05-24
 
 ## 目的
 
@@ -24,6 +24,8 @@
 10. 必要に応じて `master-shipping-expansion-summary.md`
 11. 必要に応じて `handoff-risk-register.md`
 12. 必要に応じて `handoff-runbook.md`
+13. 必要に応じて `alf-restart-prompt.md`
+14. 必要に応じて `fay-restart-prompt.md`
 
 読み込み後、三神さんには短くこう返す。
 
@@ -76,6 +78,8 @@ Fayは以下のタイミングで自動的に保存する。
 - プロジェクト一覧: `projects.md`
 - リスクと対策: `handoff-risk-register.md`
 - 三神さん向け引き継ぎ手順: `handoff-runbook.md`
+- Alf再開プロンプト: `alf-restart-prompt.md`
+- Fay再開プロンプト: `fay-restart-prompt.md`
 
 ## 確認を省略してよい作業
 
@@ -121,6 +125,22 @@ Alfに渡す依頼は、基本的に以下の形にする。
 - 推測で大きな判断をしないでください。
 - 削除や不可逆な操作は必ず確認してください。
 ```
+
+## 片方のチャットがいっぱいになった時
+
+Alfのチャットがいっぱいになった場合:
+
+- Fayが `handoff.md` と `delegated-tasks.md` を更新する。
+- Fayが `alf-restart-prompt.md` を使って、Alf新チャット用の貼り付け文を作る。
+- 三神さんはAlf新チャットにその文を貼る。
+
+Fayのチャットがいっぱいになった場合:
+
+- AlfがGitHub共通作業台を最新化する。
+- Alfが `fay-restart-prompt.md` を使って、Fay新チャット用の貼り付け文を作る。
+- 三神さんはFay新チャットにその文を貼る。
+
+どちらの場合も、片方のAIがもう片方の古いチャット本文を直接読むことはできない。最新性は、最後に保存された `handoff.md`、`意思決定ログ.md`、`delegated-tasks.md` に依存する。
 
 ## 注意
 

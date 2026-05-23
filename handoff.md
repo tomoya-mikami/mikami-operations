@@ -1,6 +1,6 @@
 # 引き継ぎメモ
 
-最終更新: 2026-05-23
+最終更新: 2026-05-24
 
 ## 目的
 
@@ -75,6 +75,8 @@ Fayが記録すること:
 - 再構築方針: `tool-rebuild-plan.md`
 - 引き継ぎリスクと対策: `handoff-risk-register.md`
 - 三神さん向け引き継ぎ手順: `handoff-runbook.md`
+- Alf再開プロンプト: `alf-restart-prompt.md`
+- Fay再開プロンプト: `fay-restart-prompt.md`
 
 毎回GitHub同期を必須にはしない。同じ端末・同じ作業台で続ける場合は、まずローカルの `START_HERE.md` と `handoff.md` を読む。
 
@@ -101,6 +103,7 @@ GitHub同期が必要なタイミング:
 - 新しい成果物、URL、スプレッドシート、GASファイルが増えた
 - 作業が1時間以上続きそう
 - 「この先も続く」タイプの作業に入る
+- FayまたはAlf片方のチャットがいっぱいになった
 
 更新後は三神さんへ短く知らせる。
 
@@ -127,6 +130,8 @@ GitHub同期が必要なタイミング:
 11. 必要に応じて `master-shipping-expansion-summary.md`
 12. 必要に応じて `handoff-risk-register.md`
 13. 必要に応じて `handoff-runbook.md`
+14. 必要に応じて `alf-restart-prompt.md`
+15. 必要に応じて `fay-restart-prompt.md`
 
 次スレッドに貼る最小文:
 
@@ -211,6 +216,8 @@ GitHub共通作業台から再開する場合の最小文:
 - `alf-test-request.md`
 - `handoff-risk-register.md`
 - `handoff-runbook.md`
+- `alf-restart-prompt.md`
+- `fay-restart-prompt.md`
 
 Alf依頼テスト:
 
@@ -237,6 +244,8 @@ CLI認証:
 - 引き継ぎリスクと対策は `handoff-risk-register.md` に保存する。
 - 安全な保存・台帳更新・commit/pushは、毎回確認せずFayが進めてよい。
 - 確認が必要なのは、削除、不可逆操作、個人情報/機密情報へのアクセスや保存、Google Drive内の削除・移動。
+- AlfがいっぱいになったらFayが `alf-restart-prompt.md` で再開支援する。
+- FayがいっぱいになったらAlfが `fay-restart-prompt.md` で再開支援する。
 
 ## 注意点
 
