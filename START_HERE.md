@@ -23,6 +23,7 @@
 9. 必要に応じて `tool-development-summary.md`
 10. 必要に応じて `master-shipping-expansion-summary.md`
 11. 必要に応じて `handoff-risk-register.md`
+12. 必要に応じて `handoff-runbook.md`
 
 読み込み後、三神さんには短くこう返す。
 
@@ -74,6 +75,7 @@ Fayは以下のタイミングで自動的に保存する。
 - 分割作業: `delegated-tasks.md`
 - プロジェクト一覧: `projects.md`
 - リスクと対策: `handoff-risk-register.md`
+- 三神さん向け引き継ぎ手順: `handoff-runbook.md`
 
 ## 確認を省略してよい作業
 

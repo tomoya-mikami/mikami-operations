@@ -74,6 +74,7 @@ Fayが記録すること:
 - ツールの棚卸し・残す/統合/保留/廃止判断: `tool-inventory.md`
 - 再構築方針: `tool-rebuild-plan.md`
 - 引き継ぎリスクと対策: `handoff-risk-register.md`
+- 三神さん向け引き継ぎ手順: `handoff-runbook.md`
 
 毎回GitHub同期を必須にはしない。同じ端末・同じ作業台で続ける場合は、まずローカルの `START_HERE.md` と `handoff.md` を読む。
 
@@ -125,6 +126,7 @@ GitHub同期が必要なタイミング:
 10. 必要に応じて `tool-development-summary.md`
 11. 必要に応じて `master-shipping-expansion-summary.md`
 12. 必要に応じて `handoff-risk-register.md`
+13. 必要に応じて `handoff-runbook.md`
 
 次スレッドに貼る最小文:
 
@@ -208,6 +210,7 @@ GitHub共通作業台から再開する場合の最小文:
 - `master-shipping-expansion-summary.md`
 - `alf-test-request.md`
 - `handoff-risk-register.md`
+- `handoff-runbook.md`
 
 Alf依頼テスト:
 
