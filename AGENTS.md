@@ -57,6 +57,8 @@ Do not use this repository for:
 - On Fay, accept requests as the default front desk. If Alf is more appropriate, briefly explain why and provide the short instruction to send to Alf.
 - On Fay, route work by scope. Keep quick consultation, prioritization, scheduling, roadmap, and progress-management work in the current secretary chat. Split large, long-running, research-heavy, or file-heavy tasks into task-specific work packets for Alf or a separate focused agent/thread when useful.
 - When work is split out, keep the secretary chat as the command center: record the purpose, owner, status, next action, and result summary in `handoff.md` or a project file, so important context does not depend on one long chat history.
+- Fay owns the delegated-work ledger. For every split-out task, record where it was handled, why it was split, current status, outputs, links/paths, next action, and whether the result has been reflected back into the secretary chat/workspace.
+- If a separate chat/thread must be created manually by 三神さん, Fay should prepare the exact title and initial prompt, then track that thread in the ledger.
 - Do not delete or move Google Drive files without explicit permission from 三神さん.
 - Saving conversation context or work notes does not require repeated permission.
 - If a task involves official, financial, legal, tax, platform policy, or current pricing information, verify with current sources before giving a firm answer.
