@@ -9,12 +9,14 @@
 - GitHubリポジトリ `mikami-operations` を作成済み
 - まずは無料プラン・Privateリポジトリで運用開始
 - Google Driveは資料保管、GitHubは作業ログと引き継ぎ台帳として使う
+- ノートPCにGitHub Desktopを導入し、`mikami-operations` をクローン済み
+- ローカル保存先: `/Users/tomoya/Documents/GitHub/mikami-operations`
 
 ## 次にやること
 
-- `README.md` を整備する
-- `handoff.md` を作成する
-- `projects.md` を作成する
+- この変更をGitHub DesktopでCommitしてPushする
+- 据え置きデスクトップPCにもGitHub Desktopを導入する
+- 据え置きデスクトップPCでも `mikami-operations` をクローンする
 - CodexとClaudeの両方がこのリポジトリを参照する運用にする
 
 ## 注意点
