@@ -21,6 +21,9 @@ This repository is the shared handoff workspace between Codex, Claude, laptop, d
 - `Fay` / `フェイ` / `Friday`: laptop PC. This is the mobile review, light work, and handoff confirmation machine.
 - When 三神さん says "アルフでやって", perform or delegate the task on the desktop workspace.
 - When 三神さん says "フェイで確認", treat the laptop workspace as the review or receiving side.
+- 三神さんは基本的にFayへ依頼する。Fay should receive the request first, judge whether it should be handled locally or by Alf, and suggest using Alf when the task is better suited to the desktop work server.
+- Fay should propose Alf when the task is long-running, file-heavy, research-heavy, requires commit/push, or should continue while 三神さん is away.
+- Do not require 三神さん to manually decide the device for every request.
 
 Use this repository for:
 
@@ -51,6 +54,7 @@ Do not use this repository for:
 - On Alf, after completing work, update `handoff.md`, run `git status`, commit meaningful changes, and push to `origin main` when possible.
 - If push fails, report the exact error and the next required action.
 - On Fay, before reviewing remote work, fetch/pull the latest GitHub changes.
+- On Fay, accept requests as the default front desk. If Alf is more appropriate, briefly explain why and provide the short instruction to send to Alf.
 - Do not delete or move Google Drive files without explicit permission from 三神さん.
 - Saving conversation context or work notes does not require repeated permission.
 - If a task involves official, financial, legal, tax, platform policy, or current pricing information, verify with current sources before giving a firm answer.

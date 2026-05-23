@@ -19,6 +19,7 @@
   - デスクトップPC: Alf / アルフ / Alfred / アルフレッド
   - ノートPC: Fay / フェイ / Friday
 - Alfでは作業後に `handoff.md` 更新、commit、可能ならpushまで行う運用を標準化
+- 三神さんは基本的にFayへ依頼する。Fayが内容を見て、長時間作業・重いファイル作業・調査・commit/pushが必要な場合は、Alfに依頼することを提案する
 
 ## 次にやること
 
