@@ -44,11 +44,16 @@ Do not use this repository for:
 ## File Roles
 
 - `README.md`: Workspace overview and rules
+- `START_HERE.md`: First file to read when a new chat/session starts
 - `handoff.md`: Current handoff status and next actions
 - `projects.md`: Active project index
 
 ## Operating Rules
 
+- At the start of a new chat/session, read `START_HERE.md` first, then follow its reading order.
+- If 三神さん says "Fay、START_HERE.mdから再開して" or "前の続き。Fayとして再開して", restart from `START_HERE.md` and restore the current context.
+- GitHub sync is not required for every chat. Use local files first when continuing on the same device/workspace.
+- Sync with GitHub when work crosses devices, after Alf pushes, before Fay hands work to Alf, or after important handoff files change.
 - Update `handoff.md` whenever work should be continued by another AI, another computer, or a later session.
 - Update `projects.md` when a project changes materially.
 - On Alf, after completing work, update `handoff.md`, run `git status`, commit meaningful changes, and push to `origin main` when possible.

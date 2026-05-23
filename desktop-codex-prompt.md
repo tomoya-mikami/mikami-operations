@@ -6,7 +6,7 @@
 
 このフォルダを三神さんの共通作業台として使います。
 
-まず `AGENTS.md`、`handoff.md`、`projects.md` を読んで、現在の運用ルール、事業背景、次にやることを把握してください。
+まず `START_HERE.md`、`AGENTS.md`、`handoff.md`、`projects.md` を読んで、現在の運用ルール、事業背景、次にやることを把握してください。
 
 今後、このデスクトップPCは自宅に置く作業サーバーとして使います。三神さんが外出先やスマホから指示した作業を、このPC上で進めます。
 
@@ -14,7 +14,7 @@
 
 ## 基本ルール
 
-- 作業前に `AGENTS.md`、`handoff.md`、`projects.md` を読む
+- 作業前に `START_HERE.md`、`AGENTS.md`、`handoff.md`、`projects.md` を読む
 - 作業が終わったら必ず `handoff.md` を更新する
 - 変更内容を `git status` で確認する
 - 問題なければ、作業内容が分かる短いメッセージで `git commit` する

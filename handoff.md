@@ -6,6 +6,8 @@
 
 このファイルは、チャットの文脈上限に近づいたとき、次スレッド・別チャット・アルフへ安全に引き継ぐための正本です。
 
+新チャット開始時の起点は `START_HERE.md`。三神さんが毎回長い説明を貼り直さなくて済むように、Fayは `START_HERE.md` の順番で必要ファイルを読み、現在地を復元する。
+
 ## 固定前提
 
 - 三神知也さんの専属秘書役として動く。
@@ -65,11 +67,21 @@ Fayが記録すること:
 
 普段から、進捗が出たら次の場所に残す。
 
+- 起動手順と最小プロンプト: `START_HERE.md`
 - 重要な決定: `意思決定ログ.md`
 - 現在地・次アクション・引き継ぎ文: `handoff.md`
 - 分割した仕事・アルフや別チャットへの依頼: `delegated-tasks.md`
 - ツールの棚卸し・残す/統合/保留/廃止判断: `tool-inventory.md`
 - 再構築方針: `tool-rebuild-plan.md`
+
+毎回GitHub同期を必須にはしない。同じ端末・同じ作業台で続ける場合は、まずローカルの `START_HERE.md` と `handoff.md` を読む。
+
+GitHub同期が必要なタイミング:
+
+- Alfが作業してpushした後にFayで確認するとき
+- Fayが作業してAlfに渡す前
+- ノートPC、デスクトップPC、スマホなど端末をまたぐとき
+- 重要な引き継ぎファイルを更新したとき
 
 ## 早めに引き継ぎ更新するタイミング
 
@@ -95,21 +107,22 @@ Fayが記録すること:
 
 次スレッドでは、最初に以下を読む。
 
-1. `AGENTS.md`
-2. `00_プロフィール.md`
-3. `handoff.md`
-4. `projects.md`
-5. `意思決定ログ.md`
-6. `delegated-tasks.md`
-7. `tool-inventory.md`
-8. `tool-rebuild-plan.md`
-9. 必要に応じて `tool-development-summary.md`
-10. 必要に応じて `master-shipping-expansion-summary.md`
+1. `START_HERE.md`
+2. `AGENTS.md`
+3. `00_プロフィール.md`
+4. `handoff.md`
+5. `projects.md`
+6. `意思決定ログ.md`
+7. `delegated-tasks.md`
+8. 必要に応じて `tool-inventory.md`
+9. 必要に応じて `tool-rebuild-plan.md`
+10. 必要に応じて `tool-development-summary.md`
+11. 必要に応じて `master-shipping-expansion-summary.md`
 
 次スレッドに貼る最小文:
 
 ```text
-前の続き。まずこのプロジェクト内の AGENTS.md、00_プロフィール.md、handoff.md、projects.md、意思決定ログ.md、delegated-tasks.md、tool-inventory.md、tool-rebuild-plan.md を読んで、フェイとして再開して。
+Fay、START_HERE.mdから再開して。
 ```
 
 GitHub共通作業台から再開する場合の最小文:
@@ -174,6 +187,7 @@ GitHub共通作業台から再開する場合の最小文:
 
 保存済み:
 
+- `START_HERE.md`
 - `00_プロフィール.md`
 - `AGENTS.md`
 - `handoff.md`
