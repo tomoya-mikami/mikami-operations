@@ -12,7 +12,7 @@
 - 今後はこのリポジトリを、ノートPC・デスクトップPC・スマホ・Codex・Claude間の共通作業台として使う
 - デスクトップPC正式作業台は `/Users/mikami/Documents/GitHub/mikami-operations-official`
 - 三神さんが「アルフでやって」「Alfで進めて」と言った場合は、デスクトップPC側Codexがこの正式作業台で作業する
-- 2026-05-23: Codexから `git commit` は成功。`git push origin main` はGitHub認証エラーで失敗
+- 2026-05-23: GitHub CLI認証後、Codexから `git push origin main` が成功。以後、アルフ運用でcommit/pushまで実行可能
 - ノートPCにGitHub Desktopを導入し、`mikami-operations` をクローン済み
 - ローカル保存先: `/Users/tomoya/Documents/GitHub/mikami-operations`
 
