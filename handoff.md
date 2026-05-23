@@ -218,6 +218,7 @@ GitHub共通作業台から再開する場合の最小文:
 - `handoff-runbook.md`
 - `alf-restart-prompt.md`
 - `fay-restart-prompt.md`
+- `presentations/fay-alf-handoff-guide.pptx`
 
 Alf依頼テスト:
 
@@ -246,6 +247,7 @@ CLI認証:
 - 確認が必要なのは、削除、不可逆操作、個人情報/機密情報へのアクセスや保存、Google Drive内の削除・移動。
 - AlfがいっぱいになったらFayが `alf-restart-prompt.md` で再開支援する。
 - FayがいっぱいになったらAlfが `fay-restart-prompt.md` で再開支援する。
+- 引き継ぎ運用の見返し用スライドは `presentations/fay-alf-handoff-guide.pptx` に保存済み。
 
 ## 注意点
 

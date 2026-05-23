@@ -49,6 +49,7 @@
 | T-010 | 安全作業の確認省略ルール | Fay | 完了 | 保存・commit/pushのたびに確認せず、スムーズに進める | `START_HERE.md`, `handoff.md`, `意思決定ログ.md` | 削除・不可逆操作・機密情報関連だけ確認する | 済 |
 | T-011 | 三神さん向け引き継ぎ手順書 | Fay | 完了 | 新チャット・Alf・スマホ運用で三神さんがやることを短くまとめる | `handoff-runbook.md` | 新チャットでは「Fay、START_HERE.mdから再開して。」を使う | 済 |
 | T-012 | Fay/Alf相互再開プロンプト | Fay / Alf | 完了 | 片方のチャットがいっぱいになった時、もう片方が新チャット移行を支援する | `alf-restart-prompt.md`, `fay-restart-prompt.md` | Alf満杯時はFay、Fay満杯時はAlfが再開プロンプトを作る | 済 |
+| T-013 | Fay/Alf引き継ぎ運用スライド | Fay | 完了 | 後で見返せるように、引き継ぎ方法と運用ルールをスライド化する | `presentations/fay-alf-handoff-guide.pptx` | 必要なら内容を更新して再出力する | 済 |
 
 ## 未整理メモ
 
