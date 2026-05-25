@@ -277,6 +277,14 @@ Alf再開:
 - 現在地: 永続worktree正本化、Fay/Alf運用安定化、マスター送料体系 v2.0 反映が中心。
 - 次アクション: Fayまたは三神さんから具体作業が来たら、Alf側でファイル作成・コード修正・調査・commit/pushまで進める。
 
+Alf再開確認:
+
+- 三神さんの指示により、Alfとして永続worktree `/Users/mikami/.codex/worktrees/ebe0/mikami-operations-official` で再開。
+- `START_HERE.md` の順番で、`00_プロフィール.md`、`handoff.md`、`projects.md`、`意思決定ログ.md`、`delegated-tasks.md`、`master-shipping-expansion-summary.md` を確認済み。
+- 現在地: 旧チャット取り込み、Shipping Policy v9詳細反映、マスター送料体系 v2.0、Fay/Alf運用安定化が並行中。
+- 最優先: T-017/T-018として、送料・Shipping Policy詳細と既存成果物ベース復元を正本へ反映する。続いてマスター送料体系 v2.0 のGAS/Sheets反映と `FIND_CHEAPEST_CARRIER()` 動作確認。
+- Fayへ戻す内容: Alf再開済み、作業ツリーは開始時点で未変更、次は具体依頼に応じてファイル作成・コード修正・調査・commit/pushまで進める。
+
 ### 2026-05-23
 
 前チャットから復元した主要情報をローカル管理ファイルへ保存済み。

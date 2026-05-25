@@ -58,6 +58,7 @@
 
 ## 未整理メモ
 
+- 2026-05-25: Alfとして永続worktree `/Users/mikami/.codex/worktrees/ebe0/mikami-operations-official` で再開。`START_HERE.md` の順番で基礎ファイルと `master-shipping-expansion-summary.md` を確認済み。現在地は旧チャット取り込み、Shipping Policy v9詳細反映、マスター送料体系 v2.0、Fay/Alf運用安定化。Fayへ戻す内容は、Alf再開済み・開始時点の作業ツリー未変更・次はT-017/T-018またはマスター送料体系反映を進めること。
 - 2026-05-25: Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。`origin/main` をfast-forward pullし、`START_HERE.md` の順番で基礎ファイルを確認済み。次に具体作業が来たら、Alf側で実作業、`handoff.md` / `delegated-tasks.md` 更新、commit/pushまで行う。
 - Claude/Codex/ChatGPT/Genspark/Manus/Cursor/Claude Code など複数ツールが関係している。
 - 同じようなGAS機能が複数チャットで作成されている可能性がある。
