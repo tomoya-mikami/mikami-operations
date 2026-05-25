@@ -217,6 +217,15 @@ GitHub共通作業台から再開する場合の最小文:
 - 各要約は重要度、緊急度、状態、反映先、Alf依頼要否、機密情報/要最新確認の有無を判断し、`chat-import-ledger.md` へ集約する。
 - 3-5件たまった場合、または反映量が多い場合は、FayがAlf向け作業パケットを作成する。
 
+I-003 リサーチサポートツール目次案:
+
+- eBay輸出リサーチ支援ツールの引き継ぎ目次案を受領。
+- 内容はGoogle Sheets + Google Apps Scriptで、仕入候補入力、AI補完、利益計算、Terapeak/オクファン確認、人間の出品OK判断、Sellsta CSV出力までを扱う。
+- 最新仕様は4シート構成、リサーチ入力は22列構成。14列、17列、20列は過去案として分離が必要。
+- APIキー、Googleアカウント情報、スプレッドシート共有URL、顧客個人情報、口座番号、パスワード、マイナンバーは保存禁止。
+- eBay手数料、Promoted Listings、International fee、US関税、DDU/DDP、EU VAT/IOSS、Sellsta CSV仕様、Geminiモデル/料金は要最新確認。
+- 反映先として `research-support-tool-import-summary.md` を作成し、詳細引き継ぎが来たらAlfで正本化する。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
