@@ -59,7 +59,7 @@
 | T-020 | I-009 eBay業務自動化 Phase1整理 | Alf / 正式作業台 | 進行中 | 稼働中GAS自動化12ファイル、定期トリガー、絶対ルール、未完了ダッシュボード要望を正本化し、再構築対象と残す機能を整理する | `ebay-automation-phase1-summary.md`, `tool-inventory.md`, `projects.md` | Alfで現行機能・禁止事項・不要4ファイル保留・Webダッシュボード要件を整理済み。次はManus AI向け仕様書作成 | 一部済 |
 | T-021 | I-010 eBay輸出自動化 Phase2セットアップ | Alf / 正式作業台 | 確認待ち | Phase2のコード・設計完了済み成果物を、環境セットアップ、テスト、本番運用開始まで進める | `ebay-automation-phase2-summary.md`, `tool-inventory.md`, `projects.md` | Alfで準備可能タスクと三神さん側APIキー取得タスクを分離済み。成果物21ファイル所在、最新料金/UI/CSV仕様、APIキー取得待ち | 一部済 |
 | T-022 | 旧チャット取り込み後の作業判定・振り分け | Fay / Alf | 進行中 | I-003からI-011までの取り込み内容を、Fay確認、Alf実作業、保留、要最新確認に分ける | `work-triage-2026-05-25.md`, `alf-import-triage-packet.md` | Fayは面談結果確認、AlfはT-017/T-018/T-020/T-021/T-023を優先順に処理する | 反映済 |
-| T-023 | I-011 カーパーツ管理ツール運用開始前確認 | Alf候補 / Manus Webdev | 受付 | `carparts-manager` の運用開始前に、Sellsta CSV、外注シート、FastAPI、DB、認証・Secrets、Sheets権限を確認する | `carparts-manager-import-summary.md`, `tool-inventory.md`, `projects.md` | Sellsta CSV実出品テスト、未確認外注シートの取り込みテスト、`staff_members`、FastAPI起動、GCP認証情報、CORS/認証設定を確認。Secrets値や認証JSONは保存しない | 未 |
+| T-023 | I-011/I-012 カーパーツ管理ツール運用開始前確認 | Alf候補 / Manus Webdev | 受付 | `carparts-manager` の運用開始前に、Sellsta CSV、外注シート、FastAPI、DB、認証・Secrets、Sheets権限を確認する | `carparts-manager-import-summary.md`, `tool-inventory.md`, `projects.md` | Sellsta CSV実出品テスト、外注2名の個別シート取り込みテスト、パート2名の給与対象設定、`staff_members`、FastAPI起動、GCP認証情報、CORS/認証設定を確認。Secrets値、生SS ID、認証JSONは保存しない | 未 |
 
 ## 未整理メモ
 

@@ -268,6 +268,15 @@ I-011 カーパーツ管理ツール:
 - 反映先として `carparts-manager-import-summary.md` を作成し、`projects.md` P-011、`delegated-tasks.md` T-023、`tool-inventory.md` へ追加した。
 - GCPサービスアカウントJSON、DB接続文字列、JWT、APIキー、Chatworkトークン、Secrets値、個人情報は保存しない。
 
+I-012 カーパーツ管理ツール全体サマリー追記:
+
+- 人員構成、スプレッドシート構成、GCPサービスアカウント前提の追記を受領。
+- 外注リサーチャー2名、パートスタッフ2名。パートスタッフは共有SSへ直接入力し、データ取り込み対象ではない。給与計算は全員対象。
+- 共有SS、禁止リストSS、テンプレートSS、外注担当者用SS 2件の構成。共有/外注SSは編集権限、禁止リストSSは閲覧権限の前提。
+- Google Sheets APIとGoogle Drive APIを利用。サービスアカウントには個人Gmail由来のファイル作成制限がある。
+- 貼り付けは途中で重複し、`ファイル構成` の見出しで切れている可能性がある。
+- 生のスプレッドシートID、GCPプロジェクトID、サービスアカウントメールは正本へ複製せず、元資料またはManus管理画面参照にする。
+
 I-007 Triad eBay輸出 Shipping Policy v9詳細目次:
 
 - Shipping Policy v9の詳細目次を受領。アカウント名等の機密寄り情報は正本保存から除外した。
