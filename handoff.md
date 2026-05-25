@@ -313,6 +313,7 @@ I-013 eBay業務自動化 Phase1 GAS詳細:
 - 2026年7月中に6期対応として `ebay_yen_converter.gs` の月列マッピングを確認する。
 - APIキー、トークン、ChatworkルームID、Script Properties値は保存しない。
 - 2026-05-26: 三神さんから、Alfで本番GASを読み取り専用確認する指示あり。削除・変更・実行は禁止。依頼内容は `alf-phase1-gas-readonly-check-request.md` に保存。
+- 2026-05-26深夜: 三神さんから「寝るので進められるところまで」と指示あり。Fay側で `management-defense-dashboard-plan.md` と `alf-overnight-work-queue.md` を作成し、Phase1読み取り確認後に経営防御ダッシュボード用データ棚卸しへ進む流れを整理した。
 
 I-010 eBay輸出自動化 Phase2:
 
