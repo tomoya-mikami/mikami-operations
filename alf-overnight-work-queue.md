@@ -62,13 +62,14 @@
 
 ### A-003: Phase1の使いやすさ改善仕様
 
-状態: A-001完了後
+状態: Fay暫定仕様作成済み / A-001完了後に実体確認
 
 参照:
 
 - `ebay-phase1-improvement-plan.md`
 - `ebay-phase1-system-map.md`
 - `ebay-phase1-test-plan.md`
+- `ebay-phase1-operations-ui-spec.md`
 
 やること:
 
@@ -89,4 +90,3 @@ Alf作業後は、以下を `handoff.md` または結果ファイルに残す。
 - 実行してよいテスト案
 - 三神さん確認が必要な操作
 - 次にFayが判断すべきこと
-
