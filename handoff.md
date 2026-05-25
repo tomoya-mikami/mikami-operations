@@ -260,6 +260,14 @@ I-006 remote compact再失敗:
 - 方針: 旧チャットへ追加指示を送るのを止め、すでに取れた目次案と成果物ファイルからAlfで詳細復元する。
 - `alf-old-chat-artifact-recovery-packet.md` を作成し、T-018として `delegated-tasks.md` に登録した。
 
+I-011 カーパーツ管理ツール:
+
+- Manus Webdev製 `carparts-manager` の引き継ぎプロンプト、ユーザーマニュアル、課題/改善案、最終プロンプトを受領。
+- 目的は、外注リサーチャーのGoogle Sheets取り込み、禁止/重複チェック、SKU採番、共有シート転記、Sellsta CSV出力、給与計算をWebアプリで自動化すること。
+- 状態は進行中 / 運用開始前確認あり。Sellsta CSV実出品テスト、未確認の外注担当者シート、FastAPI起動、GCP認証情報、Sheets権限、`staff_members`、FastAPI/CORS/認証設定を確認するまで本運用扱いにしない。
+- 反映先として `carparts-manager-import-summary.md` を作成し、`projects.md` P-011、`delegated-tasks.md` T-023、`tool-inventory.md` へ追加した。
+- GCPサービスアカウントJSON、DB接続文字列、JWT、APIキー、Chatworkトークン、Secrets値、個人情報は保存しない。
+
 I-007 Triad eBay輸出 Shipping Policy v9詳細目次:
 
 - Shipping Policy v9の詳細目次を受領。アカウント名等の機密寄り情報は正本保存から除外した。
@@ -299,7 +307,7 @@ I-010 eBay輸出自動化 Phase2:
 
 取り込み後の作業判定・振り分け:
 
-- I-003からI-010までの取り込みがたまったため、`work-triage-2026-05-25.md` で優先順位を整理した。
+- I-003からI-011までの取り込みがたまったため、`work-triage-2026-05-25.md` で優先順位を整理した。
 - Fayが持つ最優先確認はI-008の面談結果確認。2026-05-13/14は過去日付のため、結果と追加資料の有無を三神さんに聞く。
 - Alfへ渡す最優先はT-017 Shipping Policy v9 / Rate Table確認、T-018旧チャット成果物ベース復元。
 - 次点でT-020 Phase1 GAS整理、T-021 Phase2セットアップ準備。

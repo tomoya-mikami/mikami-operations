@@ -41,6 +41,7 @@
 | I-008 | 2026-05-25 | 財務 / 融資 | 公庫面談準備・BREMEN創業計画目次 | 高 | 高 | 確認待ち / 古い可能性あり | `financing-import-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 2026-05-13/14面談結果、BREMEN創業計画書xlsx最終値、印刷チェックリスト差分を確認。個人借入・本人確認書類等は保存しない |
 | I-009 | 2026-05-25 | ツール / eBay業務自動化 | eBay業務自動化 Phase1 目次 | 高 | 中 | 進行中 | `ebay-automation-phase1-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Alfで現行機能・絶対ルール・不要4ファイル保留・Webダッシュボード要件を整理済み。次は仕様書作成 |
 | I-010 | 2026-05-25 | ツール / eBay輸出自動化 | eBay輸出自動化 Phase2 目次 | 高 | 中 | 確認待ち / 要最新確認 | `ebay-automation-phase2-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Alfで準備可能タスクとAPIキー取得待ちを分離済み。成果物21ファイル所在、最新料金/UI/CSV仕様、APIキー取得待ち |
+| I-011 | 2026-05-25 | ツール / カーパーツ管理 | カーパーツ管理ツール Manus Webdev引き継ぎ | 高 | 高 | 進行中 / 運用開始前確認あり | `carparts-manager-import-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Sellsta CSV実出品テスト、未確認の外注担当者シート、FastAPI起動、GCP認証情報、Manus Secrets、Sheets権限、FastAPI/CORS認証まわりを確認。認証情報本体や個人情報は保存しない |
 
 ## 見える化の観点
 

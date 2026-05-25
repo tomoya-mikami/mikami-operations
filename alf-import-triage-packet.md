@@ -18,6 +18,30 @@ Fay側で旧チャット取り込み I-003 から I-010 までを受け付け、
 
 ## 優先順位
 
+### 0. カーパーツ管理ツール運用開始前確認
+
+対象:
+
+- I-011
+- T-023
+
+参照:
+
+- `carparts-manager-import-summary.md`
+- `/Users/tomoya/Downloads/カーパーツ管理ツール — ユーザーマニュアル.md`
+- `/Users/tomoya/Downloads/カーパーツ管理ツール — 現状の課題と今後の改善案.md`
+- `/Users/tomoya/Downloads/manus_final_prompt.md`
+
+やること:
+
+- Sellsta CSVの実出品テスト手順を確認し、可能なら1件テストする。
+- 未確認の外注担当者シートの列構成と取り込み動作を確認する。
+- FastAPIサーバーの起動状態を確認する。
+- `staff_members` の担当者種別、シート設定、給与条件を確認する。
+- GCPサービスアカウント認証情報とGoogle Sheets共有権限を確認する。
+- FastAPIのCORS全許可、直接アクセス時の認証なしAPIリスクを確認する。
+- Secrets値、認証JSON、DB接続文字列、APIキー、個人情報は正本へ保存しない。
+
 ### 1. Shipping Policy v9 / Rate Table確認
 
 対象:
