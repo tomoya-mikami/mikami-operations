@@ -322,6 +322,15 @@ Alf再開確認:
 - 最優先: T-017/T-018として、送料・Shipping Policy詳細と既存成果物ベース復元を正本へ反映する。続いてマスター送料体系 v2.0 のGAS/Sheets反映と `FIND_CHEAPEST_CARRIER()` 動作確認。
 - Fayへ戻す内容: Alf再開済み、作業ツリーは開始時点で未変更、次は具体依頼に応じてファイル作成・コード修正・調査・commit/pushまで進める。
 
+Alf作業 T-017 / T-018 / T-020 / T-021:
+
+- `alf-import-triage-packet.md` を読み、T-017 -> T-018 -> T-020 -> T-021 の順で整理した。
+- T-017: Shipping Policy v9 / Rate Tableは、正本上の確定値と未確認項目を `shipping-policy-import-summary.md` に整理。RT-Light Africa、RT-Mid Europe USD 75/Canada、RT-Heavy Antigua、Sri Lanka、66ポリシー、旧11ポリシー付替は、xlsx本体またはeBay画面確認待ち。
+- T-018: 旧チャット成果物ベース復元は、Git作業ツリー内に実体成果物がなく正本Markdownのみ確認。最新 `Code.gs`、Sellsta CSV、Shipping Policy xlsx、Rate Table xlsx、GAS/CSV実体の所在確認待ち。
+- T-020: Phase1は稼働中GAS12ファイル、定期トリガー、絶対ルール、不要4ファイル保留、Webダッシュボード要件を `ebay-automation-phase1-summary.md` に整理。稼働中システムは変更していない。
+- T-021: Phase2はAlf側で進められる準備と、三神さん側のAPIキー/トークン取得が必要な作業を `ebay-automation-phase2-summary.md` に分離。APIキー類は保存していない。
+- 次アクション: Fayは三神さんへ、成果物21ファイルやShipping Policy/Rate Table xlsxの所在、APIキー取得タイミング、Sri Lankaの扱いを確認する。
+
 ### 2026-05-23
 
 前チャットから復元した主要情報をローカル管理ファイルへ保存済み。

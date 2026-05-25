@@ -123,6 +123,28 @@
 - 66ポリシーのeBay登録はRate Table完成後に着手し、Copy機能で量産する。
 - 既存旧ポリシー11個から新ポリシーへの付替・旧削除が未完了。
 
+## 2026-05-25 Alf確認結果
+
+`alf-import-triage-packet.md` に基づき、T-017として正本Markdown上の確認と未完了整理を実施した。現時点のGit作業ツリー内には、`Triad_Shipping_Policy_Master_v9_通し番号.xlsx`、`Triad_Rate_Tables_詳細版_国名.xlsx`、GAS/CSV実体は存在しないため、eBay画面・xlsx本体の最終値は未確認として扱う。
+
+| 確認項目 | 現在の扱い | 次アクション |
+|---|---|---|
+| `RT-Light` Africa追加 | 未確認 / 要対応 | 国名詳細版xlsxまたはeBay Rate Table画面でAfrica全域が高リスク暫定送料に入っているか確認する |
+| `RT-Mid` Europe USD 75修正 | 未確認 / 要対応 | Europe行がUSD 75へ修正済みか確認する |
+| `RT-Mid` Canada行追加 | 未確認 / 要対応 | Canada行がUSD 40で追加済みか確認する |
+| `RT-Heavy` Antigua and Barbuda | 未確認 / 要対応 | LACまたは該当グループにAntigua and Barbudaが含まれるか確認する |
+| Sri Lanka | 判断待ち | Asia-Wideへ入れるか、高リスク群へ入れるかを三神さん/Fay判断に戻す |
+| 66ポリシー登録 | 未確認 / 未完了扱い | Rate Table完成後、No.01-66をCopy機能で量産する |
+| 旧11ポリシー付替 | 未確認 / 未完了扱い | 既存出品CSV取得後、旧11ポリシーから新66ポリシーへの推奨付替CSVを設計する |
+| 旧ポリシー削除 | 確認待ち | 削除は禁止。三神さん確認後、eBay画面上で手動判断する |
+
+GAS/Sheets用CSVまたはJSONへ構造化する未完了タスク:
+
+1. 配送業者別に、`carrier_id`、サービス名、Zone、国、重量下限/上限、料金、通貨、燃油込み/別、サイズ制限、容積重量ルール、サーチャージを列定義する。
+2. FedEx FICP、SpeedPAK DHL、SpeedPAK Economy、Pegasus DHLの読み取り済みデータを、上記列定義へ正規化する。
+3. Pegasus燃油サーチャージ、CPaSS/SpeedPAK料金表、eBay手数料は最新確認待ちとして、固定値確定前に出典日を残す。
+4. `master-shipping-expansion-summary.md` の送料マスターv2.0と、Shipping Policy選択ロジックを接続する。
+
 ## 配送除外国・高リスク国対応
 
 Business Policies利用中のため、Account全体除外設定が使えない可能性がある。

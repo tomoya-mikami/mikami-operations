@@ -34,13 +34,13 @@
 | I-001 | 2026-05-25 | 運用設計 | 旧チャット取り込み方法 | 高 | 中 | 反映済 | `chat-import-protocol.md`, `delegated-tasks.md`, `handoff.md` | 不要 | 旧チャット要約を受け取り次第、この台帳へ追加する |
 | I-002 | 2026-05-25 | 運用設計 | 受付チャット開始 | 高 | 中 | 反映済 | `chat-import-ledger.md`, `delegated-tasks.md` | 不要 | 以後、三神さんが貼る旧チャット要約をFayが取り込み要約として扱う |
 | I-003 | 2026-05-25 | リサーチ / ツール | eBay輸出リサーチ支援ツール目次案 | 高 | 中 | 反映中 | `research-support-tool-import-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 最新Code.gs仕様、利益計算、列構成、未実装案、禁止事項を詳細要約として受け取り、旧仕様と最新仕様を分離して反映する |
-| I-004 | 2026-05-25 | 送料 / Shipping Policy | eBay送料・関税・Shipping Policy目次案 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Rate Table、除外国、CPaSS送料マスター、既存出品移行、パート手順を詳細要約として受け取り、最新マスターと古い方針を分離する |
+| I-004 | 2026-05-25 | 送料 / Shipping Policy | eBay送料・関税・Shipping Policy目次案 | 高 | 高 | 確認待ち | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Alfで正本上の未確認項目を整理済み。Rate Table xlsx/eBay画面、66ポリシー、旧11付替、Sri Lanka判断を確認する |
 | I-005 | 2026-05-25 | 運用エラー | remote compact context_length_exceeded | 中 | 高 | 反映済 | `chat-import-protocol.md`, `handoff-risk-register.md`, `handoff.md` | 不要 | 旧チャット全体の圧縮ではなく、テーマ単位・Part分割で要約を作る |
 | I-006 | 2026-05-25 | 運用エラー | remote compact再失敗 | 高 | 高 | 反映済 | `chat-import-protocol.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | 旧チャットへの追加指示を止め、既存の目次案と成果物ファイルからAlfで詳細復元する |
-| I-007 | 2026-05-25 | 送料 / Shipping Policy | Triad eBay輸出 Shipping Policy v9詳細目次 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | v9確定値、Rate Table作業中項目、除外国、成果物、配送業者別データを反映。アカウント名等の機密寄り情報は保存しない |
+| I-007 | 2026-05-25 | 送料 / Shipping Policy | Triad eBay輸出 Shipping Policy v9詳細目次 | 高 | 高 | 確認待ち | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | v9確定値は正本化済み。Rate Table実体、配送業者別CSV/JSON化、Shipping Policy画面反映は原資料確認待ち |
 | I-008 | 2026-05-25 | 財務 / 融資 | 公庫面談準備・BREMEN創業計画目次 | 高 | 高 | 確認待ち / 古い可能性あり | `financing-import-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 2026-05-13/14面談結果、BREMEN創業計画書xlsx最終値、印刷チェックリスト差分を確認。個人借入・本人確認書類等は保存しない |
-| I-009 | 2026-05-25 | ツール / eBay業務自動化 | eBay業務自動化 Phase1 目次 | 高 | 中 | 進行中 | `ebay-automation-phase1-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 稼働中GAS12ファイル、定期トリガー、絶対ルール、Webダッシュボード要望を反映。APIトークン、ChatworkルームID、外注個人情報、eBayアカウント名は保存しない |
-| I-010 | 2026-05-25 | ツール / eBay輸出自動化 | eBay輸出自動化 Phase2 目次 | 高 | 中 | セットアップ待ち / 要最新確認 | `ebay-automation-phase2-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Phase2の3システム、成果物21ファイル、残り7ステップ、修正済みバグ、既知課題を反映。APIキー、トークン、Chatwork情報は保存しない |
+| I-009 | 2026-05-25 | ツール / eBay業務自動化 | eBay業務自動化 Phase1 目次 | 高 | 中 | 進行中 | `ebay-automation-phase1-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Alfで現行機能・絶対ルール・不要4ファイル保留・Webダッシュボード要件を整理済み。次は仕様書作成 |
+| I-010 | 2026-05-25 | ツール / eBay輸出自動化 | eBay輸出自動化 Phase2 目次 | 高 | 中 | 確認待ち / 要最新確認 | `ebay-automation-phase2-summary.md`, `tool-inventory.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Alfで準備可能タスクとAPIキー取得待ちを分離済み。成果物21ファイル所在、最新料金/UI/CSV仕様、APIキー取得待ち |
 
 ## 見える化の観点
 
