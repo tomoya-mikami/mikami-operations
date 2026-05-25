@@ -370,6 +370,14 @@ Alf作業 T-020 Phase1監査:
 - 実施していないこと: GAS本体変更、Google Driveファイル削除/移動、GASファイル削除、APIキー/トークン/個人情報の保存、Phase1稼働中システム変更。
 - 次アクション: 本番GASエディタで12ファイル・トリガー・不要候補4ファイルの実在を読み取り確認し、テスト用サンプルを使ってよいか三神さんに確認する。
 
+A-001 Phase1本番GAS読み取り確認:
+
+- 2026-05-26、`alf-overnight-work-queue.md` のA-001として、Phase1本番GAS読み取り確認を開始した。
+- `clasp`、`gcloud`、既存clasp認証、`appsscript.json` は確認した範囲では見つからず、Alf環境から本番GASへ認証済みで読み取りアクセスできなかった。
+- 結果は `ebay-phase1-readonly-check-result.md` に保存した。
+- 削除、変更、GAS関数実行、トリガー変更、Google Drive削除/移動、Script Properties値の表示/保存は行っていない。
+- 次アクション: 三神さんがブラウザでGAS画面を開いて目視確認するか、`clasp` 等の読み取り用認証経路を整えてから、ファイル名・トリガー・Script Propertiesキー名だけを確認する。
+
 ### 2026-05-23
 
 前チャットから復元した主要情報をローカル管理ファイルへ保存済み。
