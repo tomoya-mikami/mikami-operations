@@ -237,6 +237,13 @@ I-004 送料・Shipping Policy目次案:
 - eBay画面設定、SpeedPAK ExpeditedとRate Tableの効き方、Africa追加漏れ、高リスク国購入可否、CPaSS送料表、Pegasus燃油サーチャージ、eBay手数料は要最新確認。
 - 反映先として `shipping-policy-import-summary.md` を作成し、詳細引き継ぎが来たらAlfで正本化する。
 
+I-005 remote compact失敗:
+
+- 三神さんから `context_length_exceeded` エラー報告あり。
+- 原因は旧チャット全体または長大入力を一括で圧縮しようとして、モデルの文脈上限を超えたこと。
+- 対処は、チャット全体の圧縮ではなく、目次の1テーマずつ3,000-5,000字程度で分割して引き継ぐ。
+- `chat-import-protocol.md` に短縮プロンプトを追記し、`handoff-risk-register.md` にR-017として登録した。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
