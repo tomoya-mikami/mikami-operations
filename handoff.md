@@ -287,6 +287,16 @@ I-009 eBay業務自動化 Phase1:
 - 次アクションはManus AI向けWebダッシュボード仕様書作成。請求書追加/削除、書類種別自動判定、ブラウザからの操作実行を含める。
 - Chatwork APIトークン、ルームID、外注スタッフ個人情報、税理士メールアドレス、eBayアカウント名は保存しない。
 
+I-010 eBay輸出自動化 Phase2:
+
+- `eBay輸出自動化 Phase2` の引き継ぎ目次を受領。AI・出品・リサーチ向けのベンチマークセラー分析、出品自動化、価格最適化の3システム。
+- 現在地はコード・設計完了、環境セットアップ待ち。進捗目安は約60%。
+- Phase1は完成済み・変更禁止として扱う。
+- 成果物は設計ドキュメント3件、GAS6件、n8n v2ワークフロー3件、v1参照用3件、AIプロンプト3件、CSVテンプレート、全体フローチャートHTML。
+- 残り作業はApify APIトークン取得、Claude APIキー取得、GAS貼り付け、n8n Credentials登録、WF1-WF3 v2インポート、Test 0-6、本番セラーID登録。
+- eBay Seller Hub CSV仕様、Apify UI、Claude/Apify/n8n料金、APIモデル名は要最新確認。
+- APIキー、トークン、Chatwork情報は保存しない。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
