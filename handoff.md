@@ -251,6 +251,15 @@ I-006 remote compact再失敗:
 - 方針: 旧チャットへ追加指示を送るのを止め、すでに取れた目次案と成果物ファイルからAlfで詳細復元する。
 - `alf-old-chat-artifact-recovery-packet.md` を作成し、T-018として `delegated-tasks.md` に登録した。
 
+I-007 Triad eBay輸出 Shipping Policy v9詳細目次:
+
+- Shipping Policy v9の詳細目次を受領。アカウント名等の機密寄り情報は正本保存から除外した。
+- v9は60 DDP + 6 DDU = 66ポリシー。重量帯はWA-WFの6段階、価格帯はUSD 1-100からUSD 2,001-2,500までの11段階、USD 2,501以上はDDU。
+- Free Shipping戦略は、商品価格へ重量帯別基準額を上乗せし、EU-Major/Asia-MajorはRate Tableに含めず自動Free表示にする方針。
+- Rate Table確定値と作業中項目を `shipping-policy-import-summary.md` に反映。RT-LightはAfrica追加、RT-MidはEurope/Canada修正、RT-HeavyはAntigua確認が必要。
+- 配送業者はFedEx FICPをメイン、SpeedPAK DHLを予備、Pegasus DHLは燃油約47%前提で不採用。ただし燃油・DHL割引・CPaSS表は要最新確認。
+- 配送業者別データはFedEx FICP、SpeedPAK DHL、SpeedPAK Economy、Pegasus DHLが読取済みで、次タスクはGAS/Sheets用CSV/JSONへの構造化。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。

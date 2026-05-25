@@ -17,6 +17,7 @@ Alf正式作業台:
 ## 対象ID
 
 - `chat-import-ledger.md`: I-003, I-004, I-006
+- `chat-import-ledger.md`: I-007
 - `delegated-tasks.md`: T-016, T-017, T-018
 - `projects.md`: P-003, P-004, P-005
 
@@ -64,12 +65,16 @@ Alf正式作業台:
 目的:
 
 - eBay Shipping Policy、Rate Table、除外国、高リスク国、CPaSS/SpeedPAK/FedEx/DHL/Pegasus送料データの仕様を復元する。
+- I-007で受領したv9確定値、Rate Table作業中項目、配送業者別データ読取状況を反映する。
 
 確認したいもの:
 
 - `Triad_Shipping_Policy_Master_v9_通し番号.xlsx`
 - `Triad_Rate_Tables_詳細版_国名.xlsx`
 - `Triad_eBay_Setup_Guide_for_Part_Staff.docx`
+- `Triad_Shipping_Policy_Manual_v4.docx`
+- `Triad_Shipping_Flowchart_v4.pdf`
+- `safety_verification_report.txt`
 - `Genspark相談用プロンプト.md`
 - 各種旧バージョン v1-v7
 - PDFフローチャート類
@@ -81,6 +86,7 @@ Alf正式作業台:
 - 最新66ポリシー体系
 - DDP/DDU切替ルール
 - 3Rate Table仕様
+- RT-Light/Mid/Heavyの画面反映状況と修正漏れ
 - 高リスク国・除外国対応
 - CPaSS送料マスター化に必要なデータ構造
 - 既存出品のShipping Policy移行CSV構想

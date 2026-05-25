@@ -37,6 +37,7 @@
 | I-004 | 2026-05-25 | 送料 / Shipping Policy | eBay送料・関税・Shipping Policy目次案 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Rate Table、除外国、CPaSS送料マスター、既存出品移行、パート手順を詳細要約として受け取り、最新マスターと古い方針を分離する |
 | I-005 | 2026-05-25 | 運用エラー | remote compact context_length_exceeded | 中 | 高 | 反映済 | `chat-import-protocol.md`, `handoff-risk-register.md`, `handoff.md` | 不要 | 旧チャット全体の圧縮ではなく、テーマ単位・Part分割で要約を作る |
 | I-006 | 2026-05-25 | 運用エラー | remote compact再失敗 | 高 | 高 | 反映済 | `chat-import-protocol.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | 旧チャットへの追加指示を止め、既存の目次案と成果物ファイルからAlfで詳細復元する |
+| I-007 | 2026-05-25 | 送料 / Shipping Policy | Triad eBay輸出 Shipping Policy v9詳細目次 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | v9確定値、Rate Table作業中項目、除外国、成果物、配送業者別データを反映。アカウント名等の機密寄り情報は保存しない |
 
 ## 見える化の観点
 

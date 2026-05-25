@@ -92,6 +92,14 @@ URL:
 - 既存eBay出品のShipping Policy移行CSV構想と、送料マスターの重量・サイズ推定を接続する。
 - Pegasus燃油サーチャージ、CPaSS送料表、eBay手数料などは要最新確認として扱う。
 
+I-007で追加された配送データ構造化の前提:
+
+- FedEx FICP: Zone A-Z、0.5-68kg読取済み。燃油込み、税抜き。
+- SpeedPAK DHL: Zone 1-11、0.3-154kg読取済み。
+- SpeedPAK Economy: US/UK/DE/AUの4国、0.1-25kg読取済み。
+- Pegasus DHL: Zone 1-9、0.5-70kg読取済み。燃油別、約47%前提。
+- 次タスクは、これらをGAS/Sheets用マスターデータ、CSVまたはJSONへ構造化すること。
+
 ## ダッシュボード反映項目
 
 このプロジェクトはダッシュボード上では以下のように表示する。
