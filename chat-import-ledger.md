@@ -36,6 +36,7 @@
 | I-003 | 2026-05-25 | リサーチ / ツール | eBay輸出リサーチ支援ツール目次案 | 高 | 中 | 反映中 | `research-support-tool-import-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 最新Code.gs仕様、利益計算、列構成、未実装案、禁止事項を詳細要約として受け取り、旧仕様と最新仕様を分離して反映する |
 | I-004 | 2026-05-25 | 送料 / Shipping Policy | eBay送料・関税・Shipping Policy目次案 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Rate Table、除外国、CPaSS送料マスター、既存出品移行、パート手順を詳細要約として受け取り、最新マスターと古い方針を分離する |
 | I-005 | 2026-05-25 | 運用エラー | remote compact context_length_exceeded | 中 | 高 | 反映済 | `chat-import-protocol.md`, `handoff-risk-register.md`, `handoff.md` | 不要 | 旧チャット全体の圧縮ではなく、テーマ単位・Part分割で要約を作る |
+| I-006 | 2026-05-25 | 運用エラー | remote compact再失敗 | 高 | 高 | 反映済 | `chat-import-protocol.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | 旧チャットへの追加指示を止め、既存の目次案と成果物ファイルからAlfで詳細復元する |
 
 ## 見える化の観点
 

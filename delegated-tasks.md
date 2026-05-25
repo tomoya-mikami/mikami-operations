@@ -54,6 +54,7 @@
 | T-015 | 旧チャット情報取り込み | Fay / 必要に応じてAlf | 進行中 | 財務担当チャットなど過去チャットの内容を、文脈上限を超えない形で秘書ハブへ集約する | `chat-import-protocol.md`, `chat-import-ledger.md` | このチャットを受付として、貼られた要約ごとに重要度・緊急度・状態・反映先を判断。3-5件たまったらAlfへ反映作業を渡す | 進行中 |
 | T-016 | I-003 リサーチサポートツール詳細反映 | Alf候補 / 正式作業台 | 受付 | eBay輸出リサーチ支援ツールの旧チャット目次案を、最新仕様・旧仕様・要検証・未実装案に分けて正本化する | `research-support-tool-import-summary.md`, `chat-import-ledger.md` | 詳細引き継ぎ要約を受け取り次第、テーマ別メモ、`projects.md`、`delegated-tasks.md`、必要なら `tool-inventory.md` / `tool-rebuild-plan.md` へ反映する | 未 |
 | T-017 | I-004 送料・Shipping Policy詳細反映 | Alf候補 / 正式作業台 | 受付 | eBay送料・関税・Shipping Policy/Rate Table設計を、最新マスター・旧方針・要検証・スタッフ手順に分けて正本化する | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `chat-import-ledger.md` | 詳細引き継ぎ要約を受け取り次第、Rate Table、除外国、66ポリシー、CPaSS送料マスター、既存出品移行、手順書更新へ分解して反映する | 未 |
+| T-018 | 旧チャット成果物ベース復元 | Alf / 正式作業台 | 受付 | remote compact再失敗により旧チャット本文からの要約取得が困難なため、既存の目次案と成果物ファイルから詳細仕様を復元する | `alf-old-chat-artifact-recovery-packet.md`, `research-support-tool-import-summary.md`, `shipping-policy-import-summary.md` | AlfでGoogle Drive/ローカル成果物の所在を確認し、リサーチツールとShipping Policyの詳細仕様・未完了タスク・要検証事項を正本へ反映する | 未 |
 
 ## 未整理メモ
 

@@ -244,6 +244,13 @@ I-005 remote compact失敗:
 - 対処は、チャット全体の圧縮ではなく、目次の1テーマずつ3,000-5,000字程度で分割して引き継ぐ。
 - `chat-import-protocol.md` に短縮プロンプトを追記し、`handoff-risk-register.md` にR-017として登録した。
 
+I-006 remote compact再失敗:
+
+- 三神さんから、分割方針後も同じ `context_length_exceeded` が出たと報告あり。
+- 判断: その旧チャットはAI側で本文を読み直して要約する段階を超えている可能性が高い。
+- 方針: 旧チャットへ追加指示を送るのを止め、すでに取れた目次案と成果物ファイルからAlfで詳細復元する。
+- `alf-old-chat-artifact-recovery-packet.md` を作成し、T-018として `delegated-tasks.md` に登録した。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
