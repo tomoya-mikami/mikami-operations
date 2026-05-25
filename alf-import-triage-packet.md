@@ -90,19 +90,24 @@ Fay側で旧チャット取り込み I-003 から I-010 までを受け付け、
 対象:
 
 - I-009
+- I-013
 - T-020
 
 参照:
 
 - `ebay-automation-phase1-summary.md`
+- `ebay-phase1-startup-tasks.md`
 - `tool-inventory.md`
 
 やること:
 
-- 本番GAS12ファイルと定期トリガーを確認。
+- 本番GAS12ファイル、不要候補4ファイル、詳細トリガー/スケジュールを確認。
+- Script Propertiesは必要キーの存在だけ確認し、値は表示・保存しない。
+- `dashboard_manager.gs` のonOpenメニューとシステム管理シートを確認。
 - `deleteRow` 禁止、日本語Gmailラベル禁止、実行指示形式の絶対ルールを維持。
 - 不要4ファイル削除は、実害なし・三神さん確認待ちとして保留。
 - Webダッシュボード仕様書作成前に、現行機能と未完了要望を整理する。
+- 2026年7月中の6期対応、JREバンクOCR、MURC耐性強化を改善候補として管理する。
 
 ### 4. eBay輸出自動化 Phase2整理
 

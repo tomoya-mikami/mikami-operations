@@ -11,6 +11,7 @@
 ## 取り込みID
 
 - `chat-import-ledger.md`: I-009
+- 詳細追記: I-013
 - `delegated-tasks.md`: T-020
 - `projects.md`: P-009
 
@@ -56,6 +57,48 @@ Phase1は、eBay業務と税理士提出書類まわりのGAS自動化群。
 | 5 | 外注請求書チェックとChatworkアラート | 毎月11日 9:00 | `outsource_invoice_check.gs` |
 | 6 | システム管理ダッシュボード | 手動メニュー | `dashboard_manager.gs` |
 
+## 2026-05-25 詳細引き継ぎ受領
+
+以下4ファイルを受領し、I-013として詳細取り込みした。
+
+- `/Users/tomoya/Documents/Claude/Projects/eBay業務自動化Phase1/引き継ぎ_Phase1全システム.md`
+- `/Users/tomoya/Documents/Claude/Projects/eBay業務自動化Phase1/引き継ぎ_GAS詳細_Part1.md`
+- `/Users/tomoya/Documents/Claude/Projects/eBay業務自動化Phase1/引き継ぎ_GAS詳細_Part2.md`
+- `/Users/tomoya/Documents/Claude/Projects/eBay業務自動化Phase1/引き継ぎ_GAS詳細_Part3.md`
+
+詳細な起動・確認タスクは `ebay-phase1-startup-tasks.md` を正本にする。
+
+### 現在地
+
+- Phase1は全システム完了・本番稼働中として扱う。
+- 2026-04-07に基本完了、2026-04-08に強化完了、2026-05-07に最終整理完了。
+- 旧要約では9本のトリガー、GAS詳細では在庫ログ系を含めた11スケジュールが記載されている。数え方の差分として扱い、実画面で確認する。
+- 追加拡張のeBay書類OCR取り込み、スクリーンショット/CSV解析、在庫ログも実装・テスト済みとして扱う。
+
+### 詳細トリガー
+
+| 種別 | 関数 | ファイル | 時刻 |
+|---|---|---|---|
+| 日次 | `saveInvoicesFromGmail_v3` | `invoice_email_saver_v3.gs` | 8:00 |
+| 日次 | `processReceiptEmails` | `receipt_email_processor.gs` | 9:00 |
+| 日次 | `processPurchaseEmails` | `auto_inventory_logger.gs` | 10:00 / 22:00 |
+| 日次 | `processScreenshots` | `auto_inventory_logger.gs` | 21:00 |
+| 日次 | `runAutoSorterWithRename` | `auto_file_renamer.gs` + `auto_file_sorter.gs` | 23:00 |
+| 月次 | `collectTaxDocuments` | `dashboard_manager.gs` 経由 | 7日 9:00 |
+| 月次 | `collectEbayInvoices` | `dashboard_manager.gs` 経由 | 7日 10:00 |
+| 月次 | `tallyMonthlyRewards` | `dashboard_manager.gs` 経由 | 7日 11:00 |
+| 月次 | `checkInvoicesAndAlert` | `outsource_invoice_check.gs` | 11日 9:00 |
+| 月次 | `checkTaxDocuments` | `tax_doc_checker.gs` | 15日 9:00 |
+
+### 起動時に確認すること
+
+- GASプロジェクトに本番12ファイルがあること。
+- 不要候補4ファイルは削除せず、存在確認だけ行うこと。
+- Script Propertiesは必要キーの存在だけ確認し、値を表示・保存しないこと。
+- `dashboard_manager.gs` の `onOpen` メニューと「システム管理」シートを確認すること。
+- `applyTriggerChanges` は、変更内容を理解したうえで実行すること。
+- Chatwork/メール通知のテストは必要時のみ行い、トークンや宛先は保存しないこと。
+
 ## 強化3件
 
 2026-04-08完了。
@@ -94,6 +137,23 @@ Phase1は、eBay業務と税理士提出書類まわりのGAS自動化群。
 | `restore_tax_doc_master.gs` | チェックリスト復元 |
 | `screenshot_data_extractor.gs` | スクリーンショット/CSV解析 |
 | `outsource_invoice_check.gs` | 外注請求書チェック |
+
+### ファイル別の追加メモ
+
+| ファイル | 追加メモ |
+|---|---|
+| `auto_file_sorter.gs` | 投げ込みフォルダをマスターリストのキーワードとOCR月判定で月次フォルダへ振り分ける。判定不能は `00_要確認` |
+| `auto_file_renamer.gs` | Drive API OCRで金額を抽出し、領収書取得状況SSと照合してリネーム後に振り分けへ渡す |
+| `auto_inventory_logger.gs` | Claude APIで購入メールを構造化し、Gemini Visionでスクショ解析。在庫シートへUpsert |
+| `dashboard_manager.gs` | 全8システムのON/OFF、時間変更、手動実行ボタン、最終実行日時を管理 |
+| `ebay_doc_processor.gs` | eBay書類PDF/CSVをOCRまたはファイル名で判定し、月次/eBay売上へ配置 |
+| `ebay_yen_converter.gs` | MURC TTM取得、USD→JPY換算、Transaction ReportからPayoutシート作成 |
+| `invoice_email_saver_v3.gs` | 件名キーワード12種、送信元ドメイン11種で請求書メールを検出。5分制限あり |
+| `outsource_invoice_check.gs` | 毎月11日に請求書未提出スタッフを検出して通知 |
+| `receipt_email_processor.gs` | 14サービス対応。処理済みラベルは英語 `receipt_processed` |
+| `restore_tax_doc_master.gs` | 税理士提出書類リスト69項目を復元。実行すると既存データを上書きするため注意 |
+| `screenshot_data_extractor.gs` | Drive API v3 OCRを使用。JREバンクは精度問題でスキップ状態 |
+| `tax_doc_checker.gs` | 69項目と月次フォルダ内ファイルを照合し、レポートと通知を作る |
 
 ## 主要リソース
 
@@ -135,6 +195,8 @@ Phase1は、eBay業務と税理士提出書類まわりのGAS自動化群。
   - `receipt_processed` など英語ラベルを使う。
 - 操作指示は、ファイル名と関数名を明記する。
   - 例: `receipt_email_processor.gs` の `関数名()` を実行。
+- コード修正を依頼する場合は、部分差分ではなく貼り替え可能な全文を出す。
+- GASエディタ上の削除はブラウザ自動操作で保存されないことがある。削除は手動、かつ三神さん確認後に行う。
 
 ## 技術メモ
 
@@ -143,6 +205,46 @@ Phase1は、eBay業務と税理士提出書類まわりのGAS自動化群。
 - メルカードCSVはMoneyForward MEの `収入・支出詳細_YYYY-MM-DD_YYYY-MM-DD.csv` 形式。
 - 税理士提出書類マスターリストは69項目で、`restore_tax_doc_master.gs` で復元可能。
 - eBayアカウント名は正本ファイルには保存しない。必要時は安全な原資料で確認する。
+- 5期は2025年8月から2026年7月。6期に入る前に `ebay_yen_converter.gs` の月列マッピングを確認する。
+- `auto_inventory_logger.gs` はClaude API、Gemini Vision API、Chatwork APIに依存する。APIキーはScript Propertiesで管理する。
+- Drive API OCRはv3を使う。
+
+## 業務フロー
+
+### 税理士提出書類
+
+1. 毎日8:00に請求書メールを検出して保存する。
+2. 毎日9:00にサブスク等の領収書メールをPDF化または添付保存する。
+3. 毎日23:00に投げ込みフォルダのファイルをOCRリネームし、月次フォルダへ振り分ける。
+4. 毎月7日に税理士書類収集、eBay円換算、外注報酬集計を行う。
+5. 毎月11日に外注請求書未提出を通知する。
+6. 毎月15日に69項目チェックリストと実ファイルを照合する。
+
+### eBayインボイス
+
+1. eBay Seller HubからFinancial Summary / Transaction Reportをダウンロードする。
+2. 投げ込みフォルダのeBayサブフォルダへ配置する。
+3. `ebay_doc_processor.gs` で書類種別とアカウントを判定し、月次/eBay売上へ配置する。
+4. `ebay_yen_converter.gs` でMURC TTMを取得し、USDをJPYへ換算し、Payoutシートを作る。
+5. `tax_doc_checker.gs` が毎月15日に提出状況を確認する。
+
+### 在庫ログ
+
+1. 毎日10:00/22:00に購入完了メールをClaude APIで解析し、在庫シートへUpsertする。
+2. 毎日21:00にスクショをGemini Visionで解析し、出品者名・追跡番号を更新する。
+3. 処理済みメールにラベルを付け、メールPDFをDrive保存する。
+
+## 過去エラーと注意点
+
+| 内容 | 対応 |
+|---|---|
+| 日本語Gmailラベルが `-label:` で動作しない | 英語ラベルへ変更 |
+| MURC HTML構造変更 | セレクタ修正済み。今後も変更リスクあり |
+| 行削除でP/Q列メモがズレた | `deleteRow` 禁止 |
+| マスターリストが20項目に減少 | `restore_tax_doc_master.gs` で69項目へ復元 |
+| GASエディタ削除が保存されない | 手動削除のみ有効 |
+| Drive API OCR精度不足 | `00_要確認` で目視確認 |
+| JREバンクOCR精度問題 | 現在スキップ設定 |
 
 ## 未完了タスク
 
@@ -151,6 +253,9 @@ Phase1は、eBay業務と税理士提出書類まわりのGAS自動化群。
 | GASエディタから不要4ファイル削除 | 保留 | 実害なし。削除は手動、確認必須 |
 | Webダッシュボード構築 | 作業中 | Manus AI用プロンプト作成が次ステップ |
 | Webダッシュボードに請求書管理機能追加 | 新規要望 | 請求書の追加/削除、ファイル名からの書類種別自動判定を含む |
+| 6期対応 | 要対応 | 2026年7月中に `getMonthColumn_()` の確認・更新が必要 |
+| JREバンクOCR改善 | 保留 | 現在スキップ設定 |
+| MURC耐性強化 | 保留 | HTML構造変更時の代替APIやフォールバック検討 |
 
 不要候補ファイル:
 
@@ -181,13 +286,15 @@ Webダッシュボード仕様書に入れるべき整理項目:
 
 ## 次アクション
 
-1. Manus AIへ渡すWebダッシュボード仕様書を作成する。
-2. 仕様書には以下を含める。
+1. `ebay-phase1-startup-tasks.md` に沿ってAlfで起動・トリガー・Script Properties存在確認を行う。
+2. Manus AIへ渡すWebダッシュボード仕様書を作成する。
+3. 仕様書には以下を含める。
    - 税理士提出書類チェック結果のブラウザ表示。
    - ブラウザからの操作実行。
    - 請求書の追加/削除管理。
    - ファイル名パターンからの書類種別自動判定。
-3. 不要4ファイル削除は、三神さん確認後に手動実施する。
+4. 不要4ファイル削除は、三神さん確認後に手動実施する。
+5. 2026年7月中に6期対応を確認する。
 
 ## 機密・保存禁止
 
