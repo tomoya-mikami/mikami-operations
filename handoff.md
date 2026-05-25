@@ -38,6 +38,7 @@
 - 三神さんが「アルフでやって」「Alfで進めて」と言った場合は、デスクトップPC側Codexが正式作業台で作業する。
 - 2026-05-23: GitHub CLI認証後、Codexから `git push origin main` が成功済み。
 - 以後、Alf運用では作業後に `handoff.md` 更新、commit、可能ならpushまで行う。
+- 2026-05-25: 旧チャット情報取り込みの方針を `chat-import-protocol.md` に作成。古いチャット本文を丸ごと貼らず、目次化・詳細引き継ぎ要約に圧縮してからFay/Alfで反映する。
 
 Fay / フェイの役割:
 
@@ -198,6 +199,7 @@ GitHub共通作業台から再開する場合の最小文:
 9. `gas_12_M2Carrier_v2.js` を `12_M2Carrier.gs` 末尾へ追記する。
 10. `testFindCheapestCarrierV2()` と `FIND_CHEAPEST_CARRIER()` を確認する。
 11. 動作確認後、リサーチサポートツール側へ連携する。
+12. 財務担当チャットなど旧チャットの情報は、`chat-import-protocol.md` のプロンプトで要約してから取り込む。
 
 マスタースプレッドシート:
 
