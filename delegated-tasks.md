@@ -42,7 +42,7 @@
 | T-003 | マスター送料体系拡張 | 専用チャット / 必要に応じてAlf | 進行中 | FedEx以外のJP_EPL/DHL/Pegasus/OC/SpeedPAK対応 | `setupMasterV2.gs`, `gas_12_M2Carrier_v2.js`, `shipping_rates_master.csv`, `carrier_zones_master.csv`, `shipping-policy-import-summary.md` など | I-004を受領。CPaSS/SpeedPAK/FedEx/DHL/Pegasus送料表をGoogle Sheets/GAS参照用マスターへつなぐ詳細を確認する | 反映中 |
 | T-004 | ツール群棚卸し・再構築プロジェクト | フェイ | 整理中 | 乱立したツールを分類し、必要/不要を判断して再構築する | `tool-inventory.md`, `tool-rebuild-plan.md` | 追加チャット履歴を読み込み、全体台帳を完成 | 進行中 |
 | T-005 | 引き継ぎ・オートセーブ運用 | フェイ / アルフ | 進行中 | チャット上限前に次スレッドへ安全に引き継ぐ | `handoff.md`, `意思決定ログ.md`, `delegated-tasks.md` | 進捗が出るたびに更新し、長文化したら早めに三神さんへ知らせる | 済 |
-| T-006 | GitHub共通作業台 / Alf・Fay運用 | Fay / Alf / GitHub | 進行中 | 複数端末・複数AI間で作業ログと成果物を迷子にしない | `mikami-operations`, `handoff.md`, `desktop-codex-prompt.md` | Alf側で `desktop-codex-prompt.md` を読み込み、commit/push運用をテストする | 反映済 |
+| T-006 | GitHub共通作業台 / Alf・Fay運用 | Fay / Alf / GitHub | 進行中 | 複数端末・複数AI間で作業ログと成果物を迷子にしない | `mikami-operations`, `handoff.md`, `desktop-codex-prompt.md` | Alf側で永続worktree再開確認済み。commit/push結果をFayへ戻す | 反映済 |
 | T-007 | Alf依頼フローテスト | Fay / Alf代替サブエージェント | 完了 | FayからAlfへ依頼する形式が成立するか確認する | `alf-test-request.md` | 実際のAlfへ渡す場合は作業場所を明記して依頼する | 済 |
 | T-008 | 新チャット起動プロトコル | Fay | 完了 | 毎回長い設定を貼らずにFayとして再開できるようにする | `START_HERE.md`, `AGENTS.md`, `handoff.md` | 新チャットでは「Fay、START_HERE.mdから再開して。」だけで再開する | 済 |
 | T-009 | CLI認証・引き継ぎリスク対策 | Fay | 完了 | CLI pushを可能にし、複数端末運用のリスクと対策を整理する | `handoff-risk-register.md`, `handoff.md`, `意思決定ログ.md` | 以後、端末間作業ではリスク台帳の標準チェックリストを使う | 済 |
@@ -101,3 +101,22 @@
 4. `gas_12_M2Carrier_v2.js` を `12_M2Carrier.gs` 末尾へ追記する。
 5. `testFindCheapestCarrierV2()` を実行する。
 6. シート上で `=FIND_CHEAPEST_CARRIER(0.5, "US")` 等を確認する。
+
+## 2026-05-25 追記: Alf永続worktree再開確認
+
+### 受領内容
+
+三神さんから、Alfとして永続worktreeで再開し、`START_HERE.md` から必要ファイルを確認するよう依頼があった。
+
+### 確認したこと
+
+- 作業場所: `/Users/mikami/.codex/worktrees/ebe0/mikami-operations-official`
+- 読み込み済み: `START_HERE.md`、`00_プロフィール.md`、`handoff.md`、`projects.md`、`意思決定ログ.md`、`delegated-tasks.md`、`desktop-codex-prompt.md`
+- Git状態: detached HEAD
+- リモート: `origin https://github.com/tomoya-mikami/mikami-operations.git`
+
+### Fayへ戻す内容
+
+- 現在地: 永続worktreeでAlf再開が成立。作業ログ更新とcommit/pushの実地テスト中。
+- 最優先タスク: マスター送料体系 v2.0 のマスタースプレッドシート反映と、`FIND_CHEAPEST_CARRIER()` 動作確認。
+- 注意点: push後、Fay側はFetch/Pullしてこの更新を受け取る。

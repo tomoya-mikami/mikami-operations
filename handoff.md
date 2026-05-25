@@ -206,6 +206,14 @@ GitHub共通作業台から再開する場合の最小文:
 
 `https://docs.google.com/spreadsheets/d/1Yieugd_qfk-1C7WNLx1xlc9vh_PRqie8SLKkWTsCUA8/edit`
 
+2026-05-25 Alf追記:
+
+- デスクトップPC側の永続worktree `/Users/mikami/.codex/worktrees/ebe0/mikami-operations-official` でAlfとして再開した。
+- `START_HERE.md` の順番で、`00_プロフィール.md`、`handoff.md`、`projects.md`、`意思決定ログ.md`、`delegated-tasks.md`、`desktop-codex-prompt.md` を確認した。
+- Git状態は detached HEAD。リモートは `origin https://github.com/tomoya-mikami/mikami-operations.git`。
+- 現在地は、永続worktree運用の実地テスト段階。最優先は Alf側で作業後に `handoff.md` / `delegated-tasks.md` を更新し、commit/pushまで通すこと。
+- Fayへ戻す内容は、この永続worktreeでAlf再開が成立したこと、次にマスター送料体系 v2.0 の反映作業へ進めること、push結果。
+
 ## 保存チェックポイント
 
 ### 2026-05-25
