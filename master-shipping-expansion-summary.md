@@ -78,6 +78,20 @@ URL:
 - リサーチサポートツール側の統合方式
 - 料金改定時の更新手順をスタッフ運用できるか
 
+## I-004 Shipping Policy / Rate Table連携メモ
+
+2026-05-25、旧チャット取り込みで eBay送料・関税・Shipping Policy設計の目次案を受領した。
+
+このファイルは送料マスター/GAS寄りの正本、`shipping-policy-import-summary.md` はeBay画面上のShipping Policy、Rate Table、除外国、パートスタッフ手順寄りの正本として使い分ける。
+
+接続が必要な論点:
+
+- CPaSS / SpeedPAK / FedEx / DHL / Pegasusの送料データをGoogle Sheets/GASで参照できる形にする。
+- 66個のShipping Policyと、重量帯・価格帯・DDP/DDU切替を送料マスター側の計算と一致させる。
+- `RT-Light`、`RT-Mid`、`RT-Heavy` の追加送料と高リスク国暫定送料を、利益計算・CSV出力へ反映できるようにする。
+- 既存eBay出品のShipping Policy移行CSV構想と、送料マスターの重量・サイズ推定を接続する。
+- Pegasus燃油サーチャージ、CPaSS送料表、eBay手数料などは要最新確認として扱う。
+
 ## ダッシュボード反映項目
 
 このプロジェクトはダッシュボード上では以下のように表示する。
@@ -88,4 +102,3 @@ URL:
 - 担当: マスター送料体系拡張チャット
 - 次アクション: `setupMasterV2()` 実行
 - ブロッカー: GAS貼付・実行確認
-

@@ -34,6 +34,7 @@
 | I-001 | 2026-05-25 | 運用設計 | 旧チャット取り込み方法 | 高 | 中 | 反映済 | `chat-import-protocol.md`, `delegated-tasks.md`, `handoff.md` | 不要 | 旧チャット要約を受け取り次第、この台帳へ追加する |
 | I-002 | 2026-05-25 | 運用設計 | 受付チャット開始 | 高 | 中 | 反映済 | `chat-import-ledger.md`, `delegated-tasks.md` | 不要 | 以後、三神さんが貼る旧チャット要約をFayが取り込み要約として扱う |
 | I-003 | 2026-05-25 | リサーチ / ツール | eBay輸出リサーチ支援ツール目次案 | 高 | 中 | 反映中 | `research-support-tool-import-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 最新Code.gs仕様、利益計算、列構成、未実装案、禁止事項を詳細要約として受け取り、旧仕様と最新仕様を分離して反映する |
+| I-004 | 2026-05-25 | 送料 / Shipping Policy | eBay送料・関税・Shipping Policy目次案 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | Rate Table、除外国、CPaSS送料マスター、既存出品移行、パート手順を詳細要約として受け取り、最新マスターと古い方針を分離する |
 
 ## 見える化の観点
 

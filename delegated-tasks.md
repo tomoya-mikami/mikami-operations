@@ -37,9 +37,9 @@
 
 | ID | 仕事名 | 担当/場所 | ステータス | 目的 | 成果物/保存先 | 次アクション | 秘書反映 |
 |---|---|---|---|---|---|---|---|
-| T-001 | マスターファイル / 既存出品ポリシー変更ツール | このチャット / マスタースプシ | 進行中 | 既存eBay出品のShipping Policy見直し | マスタースプレッドシート、各GAS、Sellsta CSV | 残タスク確認、必要機能の棚卸し | 一部済 |
+| T-001 | マスターファイル / 既存出品ポリシー変更ツール | このチャット / マスタースプシ / 必要に応じてAlf | 進行中 | 既存eBay出品のShipping Policy見直し | マスタースプレッドシート、各GAS、Sellsta CSV、`shipping-policy-import-summary.md` | I-004を受領。既存出品CSVから新Shipping Policyへ移行する構想、Rate Table、除外国、高リスク国対応を詳細要約で確認する | 一部済 |
 | T-002 | リサーチサポートツール | リサーチチャット / 必要に応じてAlf | 進行中 | 仕入候補からSellsta出品CSVを作る | リサーチサポートスプレッドシート、`research-support-tool-import-summary.md` | 目次案 I-003 を受領。最新Code.gs仕様、利益計算、列構成、未実装案、禁止事項の詳細引き継ぎを取り込み、旧仕様と最新仕様を分離する | 一部済 |
-| T-003 | マスター送料体系拡張 | 専用チャット | 進行中 | FedEx以外のJP_EPL/DHL/Pegasus/OC/SpeedPAK対応 | `setupMasterV2.gs`, `gas_12_M2Carrier_v2.js`, `shipping_rates_master.csv`, `carrier_zones_master.csv` など | マスターシートへ一括取込スクリプトを貼付・実行、GAS関数追加、動作確認 | 反映中 |
+| T-003 | マスター送料体系拡張 | 専用チャット / 必要に応じてAlf | 進行中 | FedEx以外のJP_EPL/DHL/Pegasus/OC/SpeedPAK対応 | `setupMasterV2.gs`, `gas_12_M2Carrier_v2.js`, `shipping_rates_master.csv`, `carrier_zones_master.csv`, `shipping-policy-import-summary.md` など | I-004を受領。CPaSS/SpeedPAK/FedEx/DHL/Pegasus送料表をGoogle Sheets/GAS参照用マスターへつなぐ詳細を確認する | 反映中 |
 | T-004 | ツール群棚卸し・再構築プロジェクト | フェイ | 整理中 | 乱立したツールを分類し、必要/不要を判断して再構築する | `tool-inventory.md`, `tool-rebuild-plan.md` | 追加チャット履歴を読み込み、全体台帳を完成 | 進行中 |
 | T-005 | 引き継ぎ・オートセーブ運用 | フェイ / アルフ | 進行中 | チャット上限前に次スレッドへ安全に引き継ぐ | `handoff.md`, `意思決定ログ.md`, `delegated-tasks.md` | 進捗が出るたびに更新し、長文化したら早めに三神さんへ知らせる | 済 |
 | T-006 | GitHub共通作業台 / Alf・Fay運用 | Fay / Alf / GitHub | 進行中 | 複数端末・複数AI間で作業ログと成果物を迷子にしない | `mikami-operations`, `handoff.md`, `desktop-codex-prompt.md` | Alf側で `desktop-codex-prompt.md` を読み込み、commit/push運用をテストする | 反映済 |
@@ -53,6 +53,7 @@
 | T-014 | 永続worktree移行 | Fay / 新Codexプロジェクト | 確認待ち | 秘書運用の正本を、Codexの永続worktreeプロジェクトへ移す | `persistent-worktree-migration.md` | 三神さんが永続worktree採用を最終決定したら、新プロジェクトを作成し、移行対象ファイルを反映する | 反映中 |
 | T-015 | 旧チャット情報取り込み | Fay / 必要に応じてAlf | 進行中 | 財務担当チャットなど過去チャットの内容を、文脈上限を超えない形で秘書ハブへ集約する | `chat-import-protocol.md`, `chat-import-ledger.md` | このチャットを受付として、貼られた要約ごとに重要度・緊急度・状態・反映先を判断。3-5件たまったらAlfへ反映作業を渡す | 進行中 |
 | T-016 | I-003 リサーチサポートツール詳細反映 | Alf候補 / 正式作業台 | 受付 | eBay輸出リサーチ支援ツールの旧チャット目次案を、最新仕様・旧仕様・要検証・未実装案に分けて正本化する | `research-support-tool-import-summary.md`, `chat-import-ledger.md` | 詳細引き継ぎ要約を受け取り次第、テーマ別メモ、`projects.md`、`delegated-tasks.md`、必要なら `tool-inventory.md` / `tool-rebuild-plan.md` へ反映する | 未 |
+| T-017 | I-004 送料・Shipping Policy詳細反映 | Alf候補 / 正式作業台 | 受付 | eBay送料・関税・Shipping Policy/Rate Table設計を、最新マスター・旧方針・要検証・スタッフ手順に分けて正本化する | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `chat-import-ledger.md` | 詳細引き継ぎ要約を受け取り次第、Rate Table、除外国、66ポリシー、CPaSS送料マスター、既存出品移行、手順書更新へ分解して反映する | 未 |
 
 ## 未整理メモ
 

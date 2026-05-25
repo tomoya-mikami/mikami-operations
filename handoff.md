@@ -226,6 +226,17 @@ I-003 リサーチサポートツール目次案:
 - eBay手数料、Promoted Listings、International fee、US関税、DDU/DDP、EU VAT/IOSS、Sellsta CSV仕様、Geminiモデル/料金は要最新確認。
 - 反映先として `research-support-tool-import-summary.md` を作成し、詳細引き継ぎが来たらAlfで正本化する。
 
+I-004 送料・Shipping Policy目次案:
+
+- eBay越境輸出の送料・関税・Shipping Policy/Rate Table設計の目次案を受領。
+- 最新マスターは `Triad_Shipping_Policy_Master_v9_通し番号.xlsx`。66ポリシー構成で、DDP 60個、DDU 6個、No.01-66の通し番号体系。
+- Rate Tableは `RT-Light`、`RT-Mid`、`RT-Heavy` の3系統。国名詳細版として `Triad_Rate_Tables_詳細版_国名.xlsx` がある。
+- 高リスク国/除外国は暫定的に高額送料で抑止し、後日各Shipping PolicyのExcluded shipping locations設定を確認する。
+- CPaSS / SpeedPAK / FedEx / DHL / Pegasus送料表はGoogle Sheets/GAS参照用マスター化が必要。
+- 個人メールアドレス、eBayアカウント名、取引先・契約情報、顧客個人情報、ログイン情報、APIキーは保存禁止。
+- eBay画面設定、SpeedPAK ExpeditedとRate Tableの効き方、Africa追加漏れ、高リスク国購入可否、CPaSS送料表、Pegasus燃油サーチャージ、eBay手数料は要最新確認。
+- 反映先として `shipping-policy-import-summary.md` を作成し、詳細引き継ぎが来たらAlfで正本化する。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
