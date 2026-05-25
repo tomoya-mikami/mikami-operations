@@ -297,6 +297,15 @@ I-010 eBay輸出自動化 Phase2:
 - eBay Seller Hub CSV仕様、Apify UI、Claude/Apify/n8n料金、APIモデル名は要最新確認。
 - APIキー、トークン、Chatwork情報は保存しない。
 
+取り込み後の作業判定・振り分け:
+
+- I-003からI-010までの取り込みがたまったため、`work-triage-2026-05-25.md` で優先順位を整理した。
+- Fayが持つ最優先確認はI-008の面談結果確認。2026-05-13/14は過去日付のため、結果と追加資料の有無を三神さんに聞く。
+- Alfへ渡す最優先はT-017 Shipping Policy v9 / Rate Table確認、T-018旧チャット成果物ベース復元。
+- 次点でT-020 Phase1 GAS整理、T-021 Phase2セットアップ準備。
+- 旧チャットへの追加compact/要約依頼は停止。今後は成果物ベースで復元する。
+- Alf向け実作業パケットとして `alf-import-triage-packet.md` を作成した。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。

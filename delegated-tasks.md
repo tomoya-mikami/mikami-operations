@@ -58,6 +58,7 @@
 | T-019 | I-008 公庫面談・BREMEN創業計画確認 | Fay / 必要に応じてAlf | 受付 | 公庫・信金面談準備チャットの情報を、面談結果確認、創業計画書正本、印刷セット、追加資料タスクに分解する | `financing-import-summary.md`, `projects.md`, `handoff.md` | 2026-05-13/14の面談結果を三神さんに確認し、創業計画書xlsxと印刷チェックリストの差分を必要ならAlfで確認する | 未 |
 | T-020 | I-009 eBay業務自動化 Phase1整理 | Alf候補 / 正式作業台 | 受付 | 稼働中GAS自動化12ファイル、定期トリガー、絶対ルール、未完了ダッシュボード要望を正本化し、再構築対象と残す機能を整理する | `ebay-automation-phase1-summary.md`, `tool-inventory.md`, `projects.md` | Manus AI向けWebダッシュボード仕様書を作成する前に、現行GASの本番ファイル、不要4ファイル、操作禁止事項、保存禁止情報を確認する | 未 |
 | T-021 | I-010 eBay輸出自動化 Phase2セットアップ | Alf候補 / 正式作業台 | 受付 | Phase2のコード・設計完了済み成果物を、環境セットアップ、テスト、本番運用開始まで進める | `ebay-automation-phase2-summary.md`, `tool-inventory.md`, `projects.md` | Phase1不可侵を守り、Apify/Claude/n8n/GASの7ステップを1回1タスクで進める。eBay CSV仕様、API料金、n8n/Apify UIは最新確認する | 未 |
+| T-022 | 旧チャット取り込み後の作業判定・振り分け | Fay / Alf | 進行中 | I-003からI-010までの取り込み内容を、Fay確認、Alf実作業、保留、要最新確認に分ける | `work-triage-2026-05-25.md`, `alf-import-triage-packet.md` | Fayは面談結果確認、AlfはT-017/T-018/T-020/T-021を優先順に処理する | 反映済 |
 
 ## 未整理メモ
 
