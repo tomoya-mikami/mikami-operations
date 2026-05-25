@@ -213,6 +213,7 @@ GitHub共通作業台から再開する場合の最小文:
 - Git状態は detached HEAD。リモートは `origin https://github.com/tomoya-mikami/mikami-operations.git`。
 - 現在地は、永続worktree運用の実地テスト段階。最優先は Alf側で作業後に `handoff.md` / `delegated-tasks.md` を更新し、commit/pushまで通すこと。
 - Fayへ戻す内容は、この永続worktreeでAlf再開が成立したこと、次にマスター送料体系 v2.0 の反映作業へ進めること、push結果。
+- push結果: リモート側の先行更新を `git fetch` / `git rebase origin/main` で取り込み、Alf再開ログを `origin/main` へpush済み。
 
 ## 保存チェックポイント
 

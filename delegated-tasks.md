@@ -119,4 +119,5 @@
 
 - 現在地: 永続worktreeでAlf再開が成立。作業ログ更新とcommit/pushの実地テスト中。
 - 最優先タスク: マスター送料体系 v2.0 のマスタースプレッドシート反映と、`FIND_CHEAPEST_CARRIER()` 動作確認。
-- 注意点: push後、Fay側はFetch/Pullしてこの更新を受け取る。
+- 成果: リモート側の先行更新を取り込んだうえで、Alf再開ログをGitHub `main` へpush済み。
+- 注意点: Fay側はFetch/Pullしてこの更新を受け取る。
