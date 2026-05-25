@@ -205,6 +205,16 @@ GitHub共通作業台から再開する場合の最小文:
 
 ## 保存チェックポイント
 
+### 2026-05-25
+
+Alf再開:
+
+- 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
+- ローカルは `origin/main` から6コミット遅れていたため、`git pull --ff-only origin main` で最新化済み。
+- `START_HERE.md` を起点に、`AGENTS.md`、`00_プロフィール.md`、`handoff.md`、`projects.md`、`意思決定ログ.md`、`delegated-tasks.md` を確認済み。
+- 現在地: 永続worktree正本化、Fay/Alf運用安定化、マスター送料体系 v2.0 反映が中心。
+- 次アクション: Fayまたは三神さんから具体作業が来たら、Alf側でファイル作成・コード修正・調査・commit/pushまで進める。
+
 ### 2026-05-23
 
 前チャットから復元した主要情報をローカル管理ファイルへ保存済み。

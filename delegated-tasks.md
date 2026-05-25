@@ -54,6 +54,7 @@
 
 ## 未整理メモ
 
+- 2026-05-25: Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。`origin/main` をfast-forward pullし、`START_HERE.md` の順番で基礎ファイルを確認済み。次に具体作業が来たら、Alf側で実作業、`handoff.md` / `delegated-tasks.md` 更新、commit/pushまで行う。
 - Claude/Codex/ChatGPT/Genspark/Manus/Cursor/Claude Code など複数ツールが関係している。
 - 同じようなGAS機能が複数チャットで作成されている可能性がある。
 - 最終的には管理ダッシュボード化したい。
