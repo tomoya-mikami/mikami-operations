@@ -200,6 +200,7 @@ GitHub共通作業台から再開する場合の最小文:
 10. `testFindCheapestCarrierV2()` と `FIND_CHEAPEST_CARRIER()` を確認する。
 11. 動作確認後、リサーチサポートツール側へ連携する。
 12. 財務担当チャットなど旧チャットの情報は、`chat-import-protocol.md` のプロンプトで要約してから取り込む。
+13. 取り込み内容の重要度・進捗・反映状況は `chat-import-ledger.md` で見える化する。受付チャットは原則1つにし、3-5件たまったらFay判断でAlfへファイル反映・commit/pushを渡す。
 
 マスタースプレッドシート:
 
