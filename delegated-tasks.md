@@ -51,7 +51,7 @@
 | T-012 | Fay/Alf相互再開プロンプト | Fay / Alf | 完了 | 片方のチャットがいっぱいになった時、もう片方が新チャット移行を支援する | `alf-restart-prompt.md`, `fay-restart-prompt.md` | Alf満杯時はFay、Fay満杯時はAlfが再開プロンプトを作る | 済 |
 | T-013 | Fay/Alf引き継ぎ運用スライド | Fay | 完了 | 後で見返せるように、引き継ぎ方法と運用ルールをスライド化する | `presentations/fay-alf-handoff-guide.pptx` | 必要なら内容を更新して再出力する | 済 |
 | T-014 | 永続worktree移行 | Fay / 新Codexプロジェクト | 確認待ち | 秘書運用の正本を、Codexの永続worktreeプロジェクトへ移す | `persistent-worktree-migration.md` | 三神さんが永続worktree採用を最終決定したら、新プロジェクトを作成し、移行対象ファイルを反映する | 反映中 |
-| T-015 | 旧チャット情報取り込み | Fay / 必要に応じてAlf | 受付 | 財務担当チャットなど過去チャットの内容を、文脈上限を超えない形で秘書ハブへ集約する | `chat-import-protocol.md`, `chat-import-ledger.md` | 受付チャットに要約を貼り、Fayが重要度・進捗・反映先を判断。3-5件たまったらAlfへ反映作業を渡す | 開始 |
+| T-015 | 旧チャット情報取り込み | Fay / 必要に応じてAlf | 進行中 | 財務担当チャットなど過去チャットの内容を、文脈上限を超えない形で秘書ハブへ集約する | `chat-import-protocol.md`, `chat-import-ledger.md` | このチャットを受付として、貼られた要約ごとに重要度・緊急度・状態・反映先を判断。3-5件たまったらAlfへ反映作業を渡す | 進行中 |
 
 ## 未整理メモ
 
