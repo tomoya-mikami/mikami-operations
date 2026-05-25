@@ -312,6 +312,7 @@ I-013 eBay業務自動化 Phase1 GAS詳細:
 - `ebay-phase1-startup-tasks.md` を作成し、起動確認、トリガー確認、Script Properties存在確認、ダッシュボード確認、削除禁止事項を分離した。
 - 2026年7月中に6期対応として `ebay_yen_converter.gs` の月列マッピングを確認する。
 - APIキー、トークン、ChatworkルームID、Script Properties値は保存しない。
+- 2026-05-26: 三神さんから、Alfで本番GASを読み取り専用確認する指示あり。削除・変更・実行は禁止。依頼内容は `alf-phase1-gas-readonly-check-request.md` に保存。
 
 I-010 eBay輸出自動化 Phase2:
 
