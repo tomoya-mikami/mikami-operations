@@ -314,6 +314,7 @@ I-013 eBay業務自動化 Phase1 GAS詳細:
 - APIキー、トークン、ChatworkルームID、Script Properties値は保存しない。
 - 2026-05-26: 三神さんから、Alfで本番GASを読み取り専用確認する指示あり。削除・変更・実行は禁止。依頼内容は `alf-phase1-gas-readonly-check-request.md` に保存。
 - 2026-05-26深夜: 三神さんから「寝るので進められるところまで」と指示あり。Fay側で `management-defense-dashboard-plan.md`、`management-dashboard-data-inventory.md`、`ebay-phase1-operations-ui-spec.md`、`alf-overnight-work-queue.md` を作成し、Phase1読み取り確認後に経営防御ダッシュボード用データ棚卸しと操作UI改善へ進む流れを整理した。
+- AlfのA-001結果では、Alf環境に `clasp` / `gcloud` / 既存認証がなく、本番GAS実体確認は未完了。次はブラウザ目視確認を推奨し、`phase1-gas-browser-checklist.md` を作成した。
 
 I-010 eBay輸出自動化 Phase2:
 
