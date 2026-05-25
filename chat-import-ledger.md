@@ -38,6 +38,7 @@
 | I-005 | 2026-05-25 | 運用エラー | remote compact context_length_exceeded | 中 | 高 | 反映済 | `chat-import-protocol.md`, `handoff-risk-register.md`, `handoff.md` | 不要 | 旧チャット全体の圧縮ではなく、テーマ単位・Part分割で要約を作る |
 | I-006 | 2026-05-25 | 運用エラー | remote compact再失敗 | 高 | 高 | 反映済 | `chat-import-protocol.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | 旧チャットへの追加指示を止め、既存の目次案と成果物ファイルからAlfで詳細復元する |
 | I-007 | 2026-05-25 | 送料 / Shipping Policy | Triad eBay輸出 Shipping Policy v9詳細目次 | 高 | 高 | 反映中 | `shipping-policy-import-summary.md`, `master-shipping-expansion-summary.md`, `delegated-tasks.md`, `handoff.md`, `alf-old-chat-artifact-recovery-packet.md` | 必要 | v9確定値、Rate Table作業中項目、除外国、成果物、配送業者別データを反映。アカウント名等の機密寄り情報は保存しない |
+| I-008 | 2026-05-25 | 財務 / 融資 | 公庫面談準備・BREMEN創業計画目次 | 高 | 高 | 確認待ち / 古い可能性あり | `financing-import-summary.md`, `projects.md`, `delegated-tasks.md`, `handoff.md` | 必要 | 2026-05-13/14面談結果、BREMEN創業計画書xlsx最終値、印刷チェックリスト差分を確認。個人借入・本人確認書類等は保存しない |
 
 ## 見える化の観点
 

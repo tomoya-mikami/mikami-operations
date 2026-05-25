@@ -269,6 +269,15 @@ I-007 Triad eBay輸出 Shipping Policy v9詳細目次:
 - 配送業者はFedEx FICPをメイン、SpeedPAK DHLを予備、Pegasus DHLは燃油約47%前提で不採用。ただし燃油・DHL割引・CPaSS表は要最新確認。
 - 配送業者別データはFedEx FICP、SpeedPAK DHL、SpeedPAK Economy、Pegasus DHLが読取済みで、次タスクはGAS/Sheets用CSV/JSONへの構造化。
 
+I-008 公庫面談準備・BREMEN創業計画目次:
+
+- 公庫面談準備チャットの引き継ぎ目次を受領。2026-05-13信金面談、2026-05-14公庫面談は現在日付2026-05-25時点では過去のため、結果確認待ちとして扱う。
+- 対象はTriad輸出ECの融資相談と、合同会社BREMENの障害者グループホーム創業計画。
+- BREMEN創業計画書は「KINOPPI監修 収支シミュレーションシート」を正本として統一済みとのこと。最終数値は記憶ではなくxlsx本体で確認する。
+- ファイル所在候補は `03_融資・銀行対応/合同会社BREMEN_創業計画書.xlsx` と `印刷セット_2026-05-14_公庫面談/` 配下。
+- 個人借入、本人確認書類、通帳コピー、NISA解約書類、口座情報、印鑑関連、顧客個人情報はGitHubへ保存しない。
+- 反映先として `financing-import-summary.md` を作成。次アクションは面談結果、追加資料、印刷チェックリスト差分の確認。
+
 Alf再開:
 
 - 三神さんの指示により、Alfとして `/Users/mikami/Documents/GitHub/mikami-operations-official` で再開。
