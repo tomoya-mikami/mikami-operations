@@ -1,6 +1,6 @@
 # 引き継ぎメモ
 
-最終更新: 2026-05-24
+最終更新: 2026-05-25
 
 ## 目的
 
@@ -160,10 +160,18 @@ GitHub共通作業台から再開する場合の最小文:
 
 ## 現在地
 
-現在の中心テーマは2つ。
+現在の中心テーマは3つ。
 
 1. スマホ・ノートPC・デスクトップPC・Codex・Claude間の共通作業台運用を安定させる。
 2. Triad.inc の eBay 出品・リサーチ・送料計算・Sellsta CSV 管理を自動化する。
+3. Codexの永続worktreeを使い、秘書運用の正本を新プロジェクトへ移行するか決める。
+
+2026-05-25追記:
+
+- 三神さんから、既存秘書チャットを今後どう運用するか、永続worktreeへ移した方がよいか相談があった。
+- 判断としては、今後は永続worktreeを正本にする方がよい。
+- ただし、この既存フォルダ `/Users/tomoya/Documents/Claude/Projects/<秘書>` はGitリポジトリではないため、そのままworktree化するのではなく、`mikami-operations` などのGitリポジトリから永続worktreeプロジェクトを新規作成するのがよい。
+- 移行用まとめとして `persistent-worktree-migration.md` を作成した。
 
 確認済みのローカル管理ファイル:
 
@@ -179,15 +187,17 @@ GitHub共通作業台から再開する場合の最小文:
 
 最重要の作業:
 
-1. デスクトップPC側Codexで `desktop-codex-prompt.md` を読み込ませる。
-2. デスクトップPC側Codexに、作業完了後のcommitとpushまで任せる運用をテストする。
-3. ノートPC側では、作業前にGitHub DesktopでFetch originし、必要ならPull originを実行して成果物を受け取る。
-4. Codexモバイル連携、またはChrome Remote DesktopでスマホからデスクトップPCへ指示する方法を設定する。
-5. マスター送料体系 v2.0 をマスタースプレッドシートへ反映する。
-6. `setupMasterV2.gs` をApps Scriptへ貼り、`setupMasterV2()` を実行する。
-7. `gas_12_M2Carrier_v2.js` を `12_M2Carrier.gs` 末尾へ追記する。
-8. `testFindCheapestCarrierV2()` と `FIND_CHEAPEST_CARRIER()` を確認する。
-9. 動作確認後、リサーチサポートツール側へ連携する。
+1. 永続worktreeを使うか最終決定する。
+2. 使う場合は、`persistent-worktree-migration.md` の手順で新プロジェクトへ移行する。
+3. デスクトップPC側Codexで `desktop-codex-prompt.md` を読み込ませる。
+4. デスクトップPC側Codexに、作業完了後のcommitとpushまで任せる運用をテストする。
+5. ノートPC側では、作業前にGitHub DesktopでFetch originし、必要ならPull originを実行して成果物を受け取る。
+6. Codexモバイル連携、またはChrome Remote DesktopでスマホからデスクトップPCへ指示する方法を設定する。
+7. マスター送料体系 v2.0 をマスタースプレッドシートへ反映する。
+8. `setupMasterV2.gs` をApps Scriptへ貼り、`setupMasterV2()` を実行する。
+9. `gas_12_M2Carrier_v2.js` を `12_M2Carrier.gs` 末尾へ追記する。
+10. `testFindCheapestCarrierV2()` と `FIND_CHEAPEST_CARRIER()` を確認する。
+11. 動作確認後、リサーチサポートツール側へ連携する。
 
 マスタースプレッドシート:
 
@@ -235,6 +245,9 @@ CLI認証:
 
 ## 最新の決定
 
+- 今後の秘書運用は、可能であればCodexの永続worktreeを正本にする方がよい。
+- 既存秘書チャットを直接永続worktree化するのではなく、Gitリポジトリ `mikami-operations` をベースに新しい永続worktreeプロジェクトを作る。
+- 移行用まとめは `persistent-worktree-migration.md` に保存済み。
 - 長期運用では、チャットが突然いっぱいになる前に `handoff.md` を更新して知らせる。
 - フェイの作業進捗は、普段からオートセーブに近い形でローカル管理ファイルへ残す。
 - アルフへ分けた作業も同じく、`delegated-tasks.md` と `handoff.md` に戻す。

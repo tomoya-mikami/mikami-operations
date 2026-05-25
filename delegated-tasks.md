@@ -1,6 +1,6 @@
 # 分割作業・チャット管理台帳
 
-最終更新: 2026-05-24
+最終更新: 2026-05-25
 
 ## 目的
 
@@ -50,6 +50,7 @@
 | T-011 | 三神さん向け引き継ぎ手順書 | Fay | 完了 | 新チャット・Alf・スマホ運用で三神さんがやることを短くまとめる | `handoff-runbook.md` | 新チャットでは「Fay、START_HERE.mdから再開して。」を使う | 済 |
 | T-012 | Fay/Alf相互再開プロンプト | Fay / Alf | 完了 | 片方のチャットがいっぱいになった時、もう片方が新チャット移行を支援する | `alf-restart-prompt.md`, `fay-restart-prompt.md` | Alf満杯時はFay、Fay満杯時はAlfが再開プロンプトを作る | 済 |
 | T-013 | Fay/Alf引き継ぎ運用スライド | Fay | 完了 | 後で見返せるように、引き継ぎ方法と運用ルールをスライド化する | `presentations/fay-alf-handoff-guide.pptx` | 必要なら内容を更新して再出力する | 済 |
+| T-014 | 永続worktree移行 | Fay / 新Codexプロジェクト | 確認待ち | 秘書運用の正本を、Codexの永続worktreeプロジェクトへ移す | `persistent-worktree-migration.md` | 三神さんが永続worktree採用を最終決定したら、新プロジェクトを作成し、移行対象ファイルを反映する | 反映中 |
 
 ## 未整理メモ
 
