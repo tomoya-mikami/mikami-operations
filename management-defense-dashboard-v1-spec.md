@@ -128,6 +128,32 @@ flowchart LR
 4. Phase1本番GASは変更せず、参照だけで集計する。
 5. 三神さん確認後、必要な部分だけメニュー/ボタン化する。
 
+## 試作ブック
+
+2026-05-26に、ローカル試作用のExcelブックを作成した。
+
+| 成果物 | 内容 |
+|---|---|
+| `spreadsheets/management-defense-dashboard-v1-prototype.xlsx` | Google Sheetsへ移植する前提の試作ブック |
+| `spreadsheets/management-defense-dashboard-v1-preview.png` | 経営サマリーの見た目確認用プレビュー |
+
+含めたシート:
+
+- `経営サマリー`
+- `月次利益`
+- `データ取込状況`
+- `支出サブスク`
+- `商品カテゴリ別`
+- `要確認`
+- `月次チェック`
+- `設定`
+
+注意:
+
+- 実データはまだ入れていない。
+- 本番GAS、Google Drive、既存Google Sheetsは変更していない。
+- 次はGoogle Sheetsへ置く前に、既存データ元の実列名を確認する。
+
 ## 実装前に決めること
 
 | 決めること | 推奨 |
@@ -144,4 +170,4 @@ flowchart LR
 - 最新月データの有無確認。
 - 関税実績の保存場所確認。
 - 商品別仕入原価の接続方法確認。
-- ダッシュボード実体の作成。
+- Google Sheets上での実体作成。

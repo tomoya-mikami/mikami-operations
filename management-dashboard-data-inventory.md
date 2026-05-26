@@ -121,6 +121,13 @@
 
 ## 次に作るもの
 
-- Google Sheets版 `経営防御ダッシュボード v1` のシート雛形。
-- `00_要確認` のマスク済み移動予定リスト。
+- Google Sheets版 `経営防御ダッシュボード v1` の安全な配置先。
 - 経営防御ダッシュボードへ接続する実列名の確認メモ。
+
+## 作成済み試作
+
+| 成果物 | 内容 |
+|---|---|
+| `spreadsheets/management-defense-dashboard-v1-prototype.xlsx` | 経営防御ダッシュボードv1のローカル試作ブック |
+| `spreadsheets/management-defense-dashboard-v1-preview.png` | 経営サマリーのプレビュー |
+| `ebay-phase1-needs-review-masked-move-list.md` | `00_要確認` 50件のマスク済み個別移動予定リスト |

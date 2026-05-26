@@ -7,7 +7,8 @@
 現在のAlf側の最優先は、P-009 `eBay業務自動化 Phase1` と P-012 `経営防御ダッシュボード v1`。
 
 - P-009: 本番GASとDrive構造の読み取り確認は進んだ。`00_要確認` の分類別移動先候補も作成済み。次はマスク済み個別移動予定リスト、実行ログ、ドライラン前提の安全運用を整える。
-- P-012: Google Sheets版v1の仕様を `management-defense-dashboard-v1-spec.md` に作成。次は既存データの実列名確認と、別タブ/別スプレッドシートでの試作。
+- P-009: `ebay-phase1-needs-review-masked-move-list.md` を作成済み。実移動は未実施。
+- P-012: Google Sheets版v1の仕様を `management-defense-dashboard-v1-spec.md` に作成。ローカル試作ブック `spreadsheets/management-defense-dashboard-v1-prototype.xlsx` も作成済み。次は既存データの実列名確認と、Google Sheets上での安全な配置。
 - 本番GAS変更、Drive移動/削除、トリガー変更は未実施。
 
 ## 目的

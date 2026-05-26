@@ -33,6 +33,34 @@
 2. `00_要確認` は、実移動前にマスク済み移動予定リストだけ作る。
 3. Fay側では `alf-to-fay-management-phase1-handoff.md` を見て、三神さんへ「次に決めること」を短く返す。
 
+## 2026-05-26 Alf追記: 許可後の追加作業
+
+三神さんから次の2点について許可あり。
+
+- 経営防御ダッシュボードv1を、本番GASを触らず別シート/別タブで試作してよい。
+- `00_要確認` の中身を、実移動せずにマスク済み個別移動予定リストとして作ってよい。
+
+実施したこと:
+
+- `ebay-phase1-needs-review-masked-move-list.md` を作成。Drive上の50件を、ファイル名を保存せず `NR-001` から `NR-050` で番号化。
+- `spreadsheets/management-defense-dashboard-v1-prototype.xlsx` を作成。Google Sheets移植前提のローカル試作ブック。
+- `spreadsheets/management-defense-dashboard-v1-preview.png` を作成。経営サマリーの見た目確認用。
+- `scripts/build_management_dashboard_v1.mjs` を作成。試作ブック再生成用。
+
+未実施:
+
+- 本番GAS変更。
+- Google Drive内の削除、移動、リネーム。
+- 既存Google Sheetsへの書き込み。
+- GAS関数実行。
+- ファイル本文、PDF本文、ZIP中身確認。
+
+次アクション:
+
+1. Google Sheets上に試作ブックを置く場合は、既存本番シートとは分けて作る。
+2. 実データ接続前に、eBay売上一覧、円換算、外注費、在庫ログの実列名を読み取り確認する。
+3. `00_要確認` の実移動は、マスク済みリスト確認後に別承認を取る。
+
 ## 目的
 
 このファイルは、チャットの文脈上限に近づいたとき、次スレッド・別チャット・アルフへ安全に引き継ぐための正本です。
