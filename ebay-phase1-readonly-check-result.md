@@ -26,6 +26,12 @@
 - Script Propertiesは値露出リスクを避けるため未確認。
 - 関連スプレッドシートは開けた。表示タイトルは「税理士提出チェックリスト - Google スプレッドシート」で、正本上の「eBay業務管理マスター」IDと同一IDを開いている。カスタムらしきメニューとして「プロジェクト管理」「在庫管理」を確認した。
 
+2026-05-26追加確認:
+
+- `runInvoiceBridge` の役割とトリガー詳細時刻を確認した。
+- `collectTaxDocuments` / `collectEbayInvoices` は、全GASファイルの関数選択リスト上では見つからなかった。
+- 削除、変更、保存、GAS関数実行、トリガー保存、Script Properties確認は行っていない。
+
 ## 実施した確認
 
 参照した正本:
@@ -147,6 +153,70 @@
 - トリガー一覧の表示列は、オーナー、前回の実行、導入、イベント、関数、エラー率。
 - 一覧上で分かる頻度は「時間ベース」まで。毎日/毎月、日付、時刻の詳細は編集画面を開かないと確認できない可能性がある。
 - 編集画面を開くこと自体が誤操作につながるため、今回は開いていない。
+
+## 追加確認: `runInvoiceBridge` / `collectTaxDocuments` / `collectEbayInvoices`
+
+### `runInvoiceBridge`
+
+確認結果:
+
+- 実在ファイル: `auto_invoice_bridge.gs`
+- 実在関数: `runInvoiceBridge`
+- 関数選択リスト上の同系関数:
+  - `runInvoiceBridge`
+  - `testInvoiceBridge`
+  - `runInvoiceBridgeFullScan`
+  - `markAllExistingAsProcessed`
+  - `setInvoiceBridgeTrigger`
+
+役割:
+
+- `01_請求書メール` フォルダに保存された添付ファイルを、`04_税理士提出用/00_投げ込み用` フォルダへ自動コピーする中継処理。
+- 請求書メール自動保存v3の後、書類自動振り分けの前に動く想定。
+- 処理済みファイルIDをスプレッドシートへ記録し、同じファイルを二重コピーしない設計。
+
+トリガー詳細:
+
+| 項目 | 確認結果 |
+|---|---|
+| 関数 | `runInvoiceBridge` |
+| イベントソース | 時間主導型 |
+| トリガータイプ | 日付ベースのタイマー |
+| 実行時間帯 | 午前4時-5時 |
+| 前回実行 | `2026/05/26 4:23:47` |
+| エラー率 | `0%` |
+
+注意:
+
+- ファイル内コメントでは「請求書メール自動保存v3（毎日8:00）の後に実行」「ブリッジ: 8:30」と読める記載がある。
+- 実際の本番トリガーは午前4時-5時で、コメント上の想定時刻とズレている。
+- 削除候補だった `auto_invoice_bridge.gs` に現役トリガーがあるため、削除不可。まず「要確認」にする。
+
+### `collectTaxDocuments`
+
+確認結果:
+
+- 本番GAS全ファイルの関数選択リストでは、`collectTaxDocuments` は見つからなかった。
+- トリガー一覧にも `collectTaxDocuments` は見つからなかった。
+
+現時点の見立て:
+
+- 旧設計・旧ドキュメント上の関数名が残っている可能性が高い。
+- 税理士提出書類まわりの現役関数としては、`tax_doc_checker.gs` の `checkTaxDocuments` 系が存在する。
+- ただし、`collectTaxDocuments` と `checkTaxDocuments` が同じ役割かは未確定。
+
+### `collectEbayInvoices`
+
+確認結果:
+
+- 本番GAS全ファイルの関数選択リストでは、`collectEbayInvoices` は見つからなかった。
+- トリガー一覧にも `collectEbayInvoices` は見つからなかった。
+
+現時点の見立て:
+
+- 旧設計・旧ドキュメント上の関数名が残っている可能性が高い。
+- eBay書類まわりの現役候補としては、`ebay_yen_converter.gs` の `findAndOrganizeEbayDocs`、`ebay_doc_processor.gs` の `processEbayDocuments` が存在する。
+- ただし、`collectEbayInvoices` とこれらの関数が同じ役割かは未確定。
 
 ## Script Properties確認結果
 

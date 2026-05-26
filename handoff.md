@@ -397,6 +397,14 @@ A-001 ログイン後ブラウザ読み取り確認完了:
 - 削除、変更、GAS関数実行、トリガー追加/削除/変更、Google Drive削除/移動、Script Properties値保存は行っていない。
 - 次アクション: `runInvoiceBridge` は不要候補側でも実トリガーありのため削除不可・要確認に引き上げる。`collectTaxDocuments` / `collectEbayInvoices` は別プロジェクト、手動メニュー、または未設定の可能性を確認する。
 
+A-001 追加確認:
+
+- `runInvoiceBridge` は `auto_invoice_bridge.gs` の関数。`01_請求書メール` から `04_税理士提出用/00_投げ込み用` へ添付ファイルをコピーする中継処理で、二重コピー防止の処理済み記録を持つ。
+- `runInvoiceBridge` の本番トリガー詳細は、時間主導型 / 日付ベースのタイマー / 午前4時-5時。ファイル内コメントの「8:30」想定とはズレがある。
+- `collectTaxDocuments` / `collectEbayInvoices` は本番GAS全ファイルの関数選択リスト上では見つからず、トリガー一覧にも存在しない。旧設計名または別関数へ置換済みの可能性が高い。
+- 現役候補は、税理士提出書類側が `checkTaxDocuments` 系、eBay書類側が `findAndOrganizeEbayDocs` / `processEbayDocuments` 系。ただし同一役割かは未確定。
+- 削除、変更、保存、GAS関数実行、トリガー保存、Script Properties確認は行っていない。
+
 ### 2026-05-23
 
 前チャットから復元した主要情報をローカル管理ファイルへ保存済み。
