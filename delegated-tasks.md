@@ -61,6 +61,7 @@
 | T-022 | 旧チャット取り込み後の作業判定・振り分け | Fay / Alf | 進行中 | I-003からI-013までの取り込み内容を、Fay確認、Alf実作業、保留、要最新確認に分ける | `work-triage-2026-05-25.md`, `alf-import-triage-packet.md` | Fayは面談結果確認、AlfはT-017/T-018/T-020/T-021/T-023を優先順に処理する | 反映済 |
 | T-023 | I-011/I-012 カーパーツ管理ツール運用開始前確認 | Alf候補 / Manus Webdev | 受付 | `carparts-manager` の運用開始前に、Sellsta CSV、外注シート、FastAPI、DB、認証・Secrets、Sheets権限を確認する | `carparts-manager-import-summary.md`, `tool-inventory.md`, `projects.md` | Sellsta CSV実出品テスト、外注2名の個別シート取り込みテスト、パート2名の給与対象設定、`staff_members`、FastAPI起動、GCP認証情報、CORS/認証設定を確認。Secrets値、生SS ID、認証JSONは保存しない | 未 |
 | T-024 | 経営防御ダッシュボード v1 | Fay / Alf | 受付 | Phase1に保存済みのeBay、請求書、領収書、外注費、在庫ログ等を使い、実質利益・支出・資金繰りを見える化する | `management-defense-dashboard-plan.md`, `management-dashboard-data-inventory.md`, `alf-overnight-work-queue.md` | Phase1読み取り確認後、データソース棚卸しを確定し、Google Sheets版v1の構成を決める | 一部済 |
+| T-025 | 外注管理・報酬計算 相談 | Fay / 専用チャット / 必要に応じてAlf | 受付 | 外注スタッフとのやり取り、作業管理シート、報酬計算、支払い漏れ防止、ツール化を整理する | `outsourcing-ops-chat-prompt.md` | 専用チャットを作り、現状・課題・管理項目・報酬計算フロー・ツール化候補を整理する | 未 |
 
 ## 未整理メモ
 
