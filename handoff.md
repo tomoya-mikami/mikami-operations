@@ -1,6 +1,37 @@
 # 引き継ぎメモ
 
-最終更新: 2026-05-25
+最終更新: 2026-05-26
+
+## 2026-05-26 Alf追記: Phase1・経営管理の現在地
+
+三神さんの依頼により、Alf側では一旦スプレッドシート個別確認を置き、次の2点に集中して進めた。
+
+1. 利益が見える経営管理。
+2. eBay業務自動化 Phase1を安全に運用できる状態づくり。
+
+完了したこと:
+
+- Phase1本番GAS 12ファイル、不用候補4ファイル、トリガー、`runInvoiceBridge` の役割、Driveフォルダ構造、`00_要確認` 50件の分類は読み取り確認済み。
+- `runInvoiceBridge` は現役トリガーありのため削除候補から外す。
+- `collectTaxDocuments` / `collectEbayInvoices` は現行関数リスト・トリガー上では未検出。
+- スクショ読み取りスクリプト `screenshot_data_extractor.gs` は存在確認済み。ただし実行はしていない。
+- 新規成果物として `phase1-management-work-summary.md`、`management-defense-dashboard-v1-spec.md`、`ebay-phase1-safe-operations-runbook.md`、`alf-to-fay-management-phase1-handoff.md` を作成。
+- `ebay-phase1-needs-review-move-plan.md` を作成し、`00_要確認` の分類別移動先候補と確認事項を整理。
+- `management-dashboard-data-inventory.md` を、Phase1読み取り確認後の状態へ更新。
+
+未完了:
+
+- 経営防御ダッシュボードの実体作成。
+- eBay売上一覧、円換算、外注費、在庫ログの実列名確認。
+- `00_要確認` のマスク済み個別移動予定リスト作成。
+- Script Propertiesのキー名確認。値露出リスクがあるため未確認のまま。
+- Drive内の実移動、削除、リネーム、GAS実行、トリガー変更。
+
+次アクション:
+
+1. 経営防御ダッシュボードv1を、既存本番GASを変更しない別タブ/別スプレッドシートで試作する。
+2. `00_要確認` は、実移動前にマスク済み移動予定リストだけ作る。
+3. Fay側では `alf-to-fay-management-phase1-handoff.md` を見て、三神さんへ「次に決めること」を短く返す。
 
 ## 目的
 

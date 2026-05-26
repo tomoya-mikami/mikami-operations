@@ -152,6 +152,11 @@
 
 - `ebay-phase1-readonly-check-result.md`
 
+状態:
+
+- 済。本番GAS 12ファイル、不用候補4ファイル、トリガー、`runInvoiceBridge` の役割を確認済み。
+- Script Propertiesは値露出リスクのため未確認。
+
 ### Phase B: データソース棚卸し
 
 - 各スプレッドシートのシート名、列名、月次更新状況を確認。
@@ -161,6 +166,11 @@
 成果物:
 
 - `management-dashboard-data-inventory.md`
+
+状態:
+
+- 一部済。Driveフォルダ構造、`00_要確認`、スクショOCRスクリプトは確認済み。
+- スプレッドシート実列名、最新月データ、関税実績、商品別仕入原価は未確認。
 
 ### Phase C: v1シート設計
 
@@ -176,6 +186,10 @@
 - `資金繰り`
 - `データ取込状況`
 - `要確認`
+
+成果物:
+
+- `management-defense-dashboard-v1-spec.md`
 
 ### Phase D: 自動化
 
@@ -193,9 +207,7 @@
 
 ## 次アクション
 
-1. Alfで `alf-phase1-gas-readonly-check-request.md` を実行する。
-2. 結果を `ebay-phase1-readonly-check-result.md` に保存する。
-3. その結果を受けて、`management-dashboard-data-inventory.md` を作る。
-4. Google Sheets版の `経営防御ダッシュボード v1` のシート構成を確定する。
-5. 実装前に、どのテストを実行してよいか三神さんに確認する。
-
+1. Google Sheets版の `経営防御ダッシュボード v1` を、既存本番GASを変更しない別タブ/別スプレッドシートで試作する。
+2. eBay売上一覧、円換算、外注費、在庫ログの実列名を確認する。
+3. `00_要確認` のマスク済み個別移動予定リストを作る。
+4. 実装前に、どのテストを実行してよいか三神さんに確認する。

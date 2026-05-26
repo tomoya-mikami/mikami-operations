@@ -1,6 +1,31 @@
 # 分割作業・チャット管理台帳
 
-最終更新: 2026-05-25
+最終更新: 2026-05-26
+
+## 2026-05-26 Alf追記
+
+T-020 / T-024 を中心に、AlfでPhase1安全運用と経営防御ダッシュボードv1の整理を進めた。
+
+完了:
+
+- `phase1-management-work-summary.md` を作成し、現在終わっていること、課題、次アクションを整理。
+- `management-defense-dashboard-v1-spec.md` を作成し、Google Sheets版の経営防御ダッシュボードv1仕様を整理。
+- `ebay-phase1-safe-operations-runbook.md` を作成し、Phase1の見るだけ/ドライラン/確認後実行/禁止操作を整理。
+- `ebay-phase1-needs-review-move-plan.md` を作成し、`00_要確認` の分類別移動先候補を整理。
+- `alf-to-fay-management-phase1-handoff.md` を作成し、Fayへ返す要点を整理。
+- `management-dashboard-data-inventory.md` を更新し、本番GASとDrive構造の確認済み状態を反映。
+
+未完了:
+
+- 経営防御ダッシュボードの実シート作成。
+- `00_要確認` のマスク済み個別移動予定リスト作成。
+- 実列名確認。
+- Script Propertiesキー名確認。
+
+次アクション:
+
+- T-020: 実移動せず、`00_要確認` の移動予定リストを作る。
+- T-024: 既存本番GASを変更せず、別シート/別タブで経営防御ダッシュボードv1を試作する。
 
 ## 目的
 
