@@ -386,6 +386,17 @@ A-001 ブラウザ確認追記:
 - 本番GAS 12ファイル、不要候補4ファイル、トリガー、Script Propertiesキー名、ダッシュボード/メニューは引き続き未確認。
 - 次アクションは、三神さんがログイン済みブラウザで目視確認するか、Alf用の読み取り専用認証経路を整えること。
 
+A-001 ログイン後ブラウザ読み取り確認完了:
+
+- 三神さんログイン後、Codex in-app browserで本番GAS編集画面、トリガー画面、関連スプレッドシートを読み取り確認した。
+- 本番GAS 12ファイルと不要候補4ファイルはすべて実在確認済み。`appsscript.json` も確認済み。
+- トリガー一覧では、`saveInvoicesFromGmail_v3`、`processReceiptEmails`、`processPurchaseEmails` 2件、`processScreenshots`、`runAutoSorterWithRename`、`tallyMonthlyRewards`、`checkInvoicesAndAlert`、`checkTaxDocuments`、想定外の `runInvoiceBridge` を確認。`collectTaxDocuments` と `collectEbayInvoices` は一覧上では見つからず。
+- トリガー詳細時刻は一覧上に表示されず、編集画面を開く必要があるため未確認。誤操作回避のため編集画面は開いていない。
+- Script Propertiesは値露出リスクがあるため未確認。キー名も保存していない。
+- スプレッドシート側は、正本上のIDを開いたところ表示タイトルが `税理士提出チェックリスト`。カスタムらしき `プロジェクト管理` / `在庫管理` とタブ `更新と管理` を確認。シート内データは読んでいない。
+- 削除、変更、GAS関数実行、トリガー追加/削除/変更、Google Drive削除/移動、Script Properties値保存は行っていない。
+- 次アクション: `runInvoiceBridge` は不要候補側でも実トリガーありのため削除不可・要確認に引き上げる。`collectTaxDocuments` / `collectEbayInvoices` は別プロジェクト、手動メニュー、または未設定の可能性を確認する。
+
 ### 2026-05-23
 
 前チャットから復元した主要情報をローカル管理ファイルへ保存済み。
