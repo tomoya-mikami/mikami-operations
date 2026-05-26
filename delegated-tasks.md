@@ -109,9 +109,11 @@ T-020 / T-024 を中心に、AlfでPhase1安全運用と経営防御ダッシュ
 | T-023 | I-011/I-012 カーパーツ管理ツール運用開始前確認 | Alf候補 / Manus Webdev | 受付 | `carparts-manager` の運用開始前に、Sellsta CSV、外注シート、FastAPI、DB、認証・Secrets、Sheets権限を確認する | `carparts-manager-import-summary.md`, `tool-inventory.md`, `projects.md` | Sellsta CSV実出品テスト、外注2名の個別シート取り込みテスト、パート2名の給与対象設定、`staff_members`、FastAPI起動、GCP認証情報、CORS/認証設定を確認。Secrets値、生SS ID、認証JSONは保存しない | 未 |
 | T-024 | 経営防御ダッシュボード v1 | Fay / Alf | 受付 | Phase1に保存済みのeBay、請求書、領収書、外注費、在庫ログ等を使い、実質利益・支出・資金繰りを見える化する | `management-defense-dashboard-plan.md`, `management-dashboard-data-inventory.md`, `alf-overnight-work-queue.md` | Phase1読み取り確認後、データソース棚卸しを確定し、Google Sheets版v1の構成を決める | 一部済 |
 | T-025 | 外注管理・報酬計算 相談 | Fay / 専用チャット / 必要に応じてAlf | 整理中 | 外注スタッフとのやり取り、作業管理シート、報酬計算、支払い漏れ防止、ツール化を整理する | `outsourcing-ops-chat-prompt.md`, `outsourcing-management-improvement-plan.md` | 現行表を壊さず、別テンプレートで6シート構成案を作るか判断する。修理報酬は標準単価制+例外のみ承認工数制を第一候補にする | 進行中 |
+| T-026 | カーパーツ価格監視・販売価格見直しMVP | Fay司令塔 / Alf実装候補 | 受付 | モノタロウ価格変動、在庫切れ、取扱終了、利益率低下を検知し、販売価格見直し候補を出す | `carparts-price-monitor-roadmap.md`, `carparts-manager-import-summary.md`, `projects.md` | 三神さん共有の入力用シートでタブ/列/gidを読み取り確認し、既存列を壊さず `設定`、`価格監視マスター`、`価格履歴`、`販売価格見直し候補` を追加する。標準は5,000件/14日/1日約358件、周期と1回処理件数は設定タブで変更可能にする。価格改定・出品停止は候補表示までで自動実行しない | 進行中 |
 
 ## 未整理メモ
 
+- 2026-05-26: 三神さんから、カーパーツリサーチ現行手順を受領。B列にモノタロウURL、C列に税別価格、D列に入数、E列に85%掛け想定仕入、H列にeBay基準店舗URLを入力する。基準セラーが同型番を出している場合は、自社の商品価格+送料の総額が基準セラー総額を下回らないようにする。課題は、モノタロウ価格上昇、在庫切れ/取扱終了、利益率低下、Shipping Policy不適合の見逃し。`carparts-price-monitor-roadmap.md` に1週間ロードマップを作成した。
 - 2026-05-26: A-001としてPhase1本番GAS読み取り確認を開始。`clasp`/`gcloud`/既存clasp認証は見つからず、Alf環境から本番GAS実体を読み取れなかった。結果は `ebay-phase1-readonly-check-result.md` に保存。削除・変更・実行・トリガー変更・Script Properties値保存・Drive操作は行っていない。
 - 2026-05-26: ブラウザで本番GAS URLを開いたがGoogleログイン画面が表示されたため、指示どおり停止。ログイン情報は要求していない。
 - 2026-05-26: 三神さんログイン後、Codex in-app browserでA-001を続行。本番GAS 12ファイル、不要候補4ファイル、トリガー一覧、スプレッドシート側の `プロジェクト管理` / `在庫管理` / `更新と管理` を読み取り確認。削除・変更・実行なし。Script Propertiesは値露出リスクのため未確認。
