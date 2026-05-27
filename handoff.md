@@ -6,10 +6,18 @@
 
 三神さんから、推定送料と実送料の差、請求関税の妥当性、Chatworkカーパーツコミュニティ内の品切れ/値上げ情報を自社出品リストへ反映する課題が追加された。
 
+追加ヒアリングで分かった業務実態:
+
+- 関税は請求書が届くため、その請求書内容を確認元にする。
+- 売れたカーパーツは、注文データを共有している部品商から直接お客様へ発送してもらっている。
+- 部品商共有スプレッドシートには、1注文ごとの仕入価格や送料が表示される。
+- eBay注文データを読み込めば、注文国、売上、購入者支払送料、Shipping Policyを確認できる。
+- したがって、赤字防止の本命は `eBay注文取込`、`部品商請求明細`、`関税チェック` を注文ID/SKUで突合する `注文コスト突合`。
+
 作成・更新したもの:
 
 - `carparts-cost-control-roadmap.md`: 送料差額、関税、Chatwork情報、AI入力補助、出品反映候補まで含む短期改修ロードマップ。
-- `gas/carparts_cost_control_mvp.gs`: `コスト監視設定`、`送料差額チェック`、`関税チェック`、`Chatwork情報取込`、`AI入力補助`、`出品反映候補` を作るGAS MVP。
+- `gas/carparts_cost_control_mvp.gs`: `コスト監視設定`、`eBay注文取込`、`部品商請求明細`、`送料差額チェック`、`関税チェック`、`注文コスト突合`、`Chatwork情報取込`、`AI入力補助`、`出品反映候補` を作るGAS MVP。
 - `visuals/carparts-cost-control-loop.svg`: 価格、送料、関税、Chatwork情報、AI候補を出品反映候補へ集約する図解。
 - `alf-carparts-cost-control-mvp-request.md`: Alf/ログイン済みGoogle Sheets環境で追加・10件テストを行う依頼パケット。
 - `carparts-research-operator-manual.md`: 送料、関税、Chatwork情報の扱いを追記。
@@ -25,7 +33,7 @@
 
 実施済み検証:
 
-- `gas/carparts_cost_control_mvp.gs` 構文チェック済み。
+- `gas/carparts_cost_control_mvp.gs` 構文チェック済み。注文単位の突合拡張後も確認済み。
 - 更新後の `gas/carparts_price_monitor_mvp.gs` 構文チェック済み。
 - `visuals/carparts-cost-control-loop.svg` XMLチェック済み。
 
@@ -40,9 +48,10 @@
 
 1. ログイン済みGoogle Sheets環境またはAlfで、`gas/carparts_price_monitor_mvp.gs` 更新版と `gas/carparts_cost_control_mvp.gs` をApps Scriptへ追加する。
 2. `カーパーツコスト監視` メニューから `初期セットアップ` を実行する。
-3. `送料差額チェック`、`関税チェック`、`Chatwork情報取込` を各10件でテストする。
-4. `出品反映候補` に候補が集約されることを確認する。
-5. 結果を `delegated-tasks.md` と `handoff.md` に戻す。
+3. `eBay注文取込`、`部品商請求明細`、`送料差額チェック`、`関税チェック`、`Chatwork情報取込` を各10件でテストする。
+4. `注文コスト突合` で注文ID/SKUごとの粗利と利益率が出ることを確認する。
+5. `出品反映候補` に候補が集約されることを確認する。
+6. 結果を `delegated-tasks.md` と `handoff.md` に戻す。
 
 ## 2026-05-27 Fay追記: カーパーツリサーチ作業マニュアル・改善イラスト
 

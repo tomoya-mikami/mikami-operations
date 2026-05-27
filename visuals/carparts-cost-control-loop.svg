@@ -55,9 +55,9 @@
 
   <rect class="card red" x="1090" y="150" width="240" height="180" />
   <text class="label" x="1116" y="190">4. 売れた後の実績</text>
-  <text class="body" x="1116" y="220">実送料</text>
-  <text class="body" x="1116" y="243">請求関税</text>
-  <text class="body" x="1116" y="266">返品/キャンセル理由</text>
+  <text class="body" x="1116" y="220">eBay注文データ</text>
+  <text class="body" x="1116" y="243">部品商請求明細</text>
+  <text class="body" x="1116" y="266">関税請求書</text>
   <text class="small" x="1116" y="296">次回出品判断へ戻す</text>
 
   <rect class="card amber" x="80" y="430" width="250" height="150" />

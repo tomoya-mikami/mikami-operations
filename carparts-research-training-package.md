@@ -28,10 +28,10 @@
 | 資料 | 用途 |
 |---|---|
 | `carparts-price-monitor-roadmap.md` | 価格監視・販売価格見直しロードマップ |
-| `carparts-cost-control-roadmap.md` | 送料差額、関税、Chatwork情報、AI入力補助まで含む短期改修ロードマップ |
+| `carparts-cost-control-roadmap.md` | eBay注文、部品商請求明細、送料差額、関税請求書、Chatwork情報、AI入力補助まで含む短期改修ロードマップ |
 | `carparts-price-monitor-mvp-implementation.md` | 価格監視MVPの導入手順 |
 | `gas/carparts_price_monitor_mvp.gs` | Google Sheetsへ貼るGAS MVP |
-| `gas/carparts_cost_control_mvp.gs` | 送料差額、関税、Chatwork貼付解析、出品反映候補のGAS MVP |
+| `gas/carparts_cost_control_mvp.gs` | eBay注文取込、部品商請求明細、注文コスト突合、送料差額、関税、Chatwork貼付解析、出品反映候補のGAS MVP |
 | `alf-carparts-price-monitor-mvp-request.md` | Alfで本番追加・10件テストするための依頼パケット |
 
 ## 使い方
@@ -39,7 +39,7 @@
 1. パートさんには `carparts-research-operator-manual.md` と `visuals/carparts-research-workflow-for-beginners.svg` を渡す。
 2. 管理者側では `carparts-research-improvement-proposal.md` を読んで、価格監視、CSV出力、AI補助、Shipping Policy候補の順で進める。
 3. 本番シート側では、価格監視MVPを10件テストから始める。
-4. 送料差額、関税、Chatwork情報も `出品反映候補` に集める。
+4. eBay注文、部品商請求明細、関税請求書を `注文コスト突合` へ集め、送料差額、関税、Chatwork情報も `出品反映候補` に集める。
 5. Sellsta CSVの実出品テストが通ったら、外注出品作業を手入力からCSV確認へ移す。
 
 ## 次に作るとよいもの
