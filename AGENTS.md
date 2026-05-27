@@ -58,8 +58,10 @@ Do not use this repository for:
 - If 三神さん says "Fay、START_HERE.mdから再開して" or "前の続き。Fayとして再開して", restart from `START_HERE.md` and restore the current context.
 - GitHub sync is not required for every chat. Use local files first when continuing on the same device/workspace.
 - Sync with GitHub when work crosses devices, after Alf pushes, before Fay hands work to Alf, or after important handoff files change.
-- Safe saves, ledger updates, commits, and pushes may proceed without asking every time.
-- Always ask 三神さん before deletion, irreversible operations, accessing/saving personal or confidential information, or deleting/moving Google Drive files.
+- Safe saves, ledger updates, commits, pushes, file creation, draft code, test code, design docs, read-only checks, non-destructive sheet/tab additions, and candidate-list generation may proceed without asking every time.
+- 三神さん has explicitly requested high autonomy: do not stop to ask confirmation unless the action involves data deletion, irreversible changes, security/credentials/secrets, personal/confidential information, Google Drive file deletion/move, automatic price changes, automatic listing termination, or direct writes that could overwrite existing business data.
+- When unsure, prefer a non-destructive path that preserves the original data, records what was done, and continues. Ask only if no safe non-destructive path exists.
+- Always ask 三神さん before deletion, irreversible operations, accessing/saving personal or confidential information, handling credentials/secrets, automatic price changes, automatic listing termination, overwriting existing business data, or deleting/moving Google Drive files.
 - Update `handoff.md` whenever work should be continued by another AI, another computer, or a later session.
 - Update `projects.md` when a project changes materially.
 - On Alf, after completing work, update `handoff.md`, run `git status`, commit meaningful changes, and push to `origin main` when possible.
