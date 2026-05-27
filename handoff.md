@@ -2,6 +2,32 @@
 
 最終更新: 2026-05-26
 
+## 2026-05-27 Fay追記: カーパーツリサーチ作業マニュアル・改善イラスト
+
+三神さんから、初めてのパートさんにも分かるカーパーツリサーチ工程、作業方法イラスト、AI導入/改善点/問題点/リスク/売上安定化/一括出品/コスト削減提案をまとめる依頼あり。
+
+作成物:
+
+- `carparts-research-operator-manual.md`: 初心者向け作業マニュアル。基準店舗確認、型番抽出、モノタロウURL、税別価格、入数、基準セラー総額、要確認メモまで整理。
+- `carparts-research-improvement-proposal.md`: AI導入、改善点、問題点、リスク回避、出品数増加、安定売上、一括出品、外注費削減、90日ロードマップを整理。
+- `visuals/carparts-research-workflow-for-beginners.svg`: 初心者向け作業工程イラスト。
+- `visuals/carparts-research-ai-improvement-map.svg`: AI/自動化による改善全体像。
+- `visuals/carparts-research-90day-roadmap.svg`: 90日改善ロードマップ。
+- `visuals/carparts-research-cover-generated.png`: 表紙用生成イラスト。
+
+確認した外部公式情報:
+
+- eBay Seller Hub Reports: CSV/Excelテンプレートで出品追加、修正、再出品、終了が可能。
+- eBay Bulk Listing Tools: Seller Hub Reports、MIP、Trading API、Sell Feed APIなどの選択肢。
+- eBay Product Research: 直近3年の販売データ、平均販売価格、送料、Sell-throughなどを確認可能。
+- eBay Motors Parts Compatibility: Fitment/互換性情報は検索性、返品リスク、買い手の適合確認に関係する。
+
+結論:
+
+- 出品数を増やす前に、価格監視、入力品質、要確認キュー、Shipping Policy候補で赤字事故を止める。
+- 出品外注はなくすより、手入力から「CSV確認・例外処理」に役割を変える。
+- 一括出品は、まずSellsta CSV受入テスト、次にSeller Hub Reports形式対応、将来API/MIP連携の順が安全。
+
 ## 2026-05-27 Fay追記: 自律作業ルール強化
 
 三神さんから、作業が止まらないように「データ削除やセキュリティに係ること以外はいちいち確認不要」と明確な指示あり。
