@@ -38,6 +38,10 @@ function onOpen() {
     .addItem('見直し候補を再作成', 'rebuildReviewCandidates')
     .addItem('手動確認キューを再作成', 'rebuildManualQueue')
     .addToUi();
+
+  if (typeof installCarpartsCostControlMenu === 'function') {
+    installCarpartsCostControlMenu();
+  }
 }
 
 function setupCarpartsPriceMonitor() {

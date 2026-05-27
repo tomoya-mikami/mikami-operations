@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+  <title id="title">カーパーツ赤字防止ループ</title>
+  <desc id="desc">リサーチ入力、価格監視、送料差額、関税チェック、Chatwork情報、AI補助を出品反映候補に集約する流れ</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 36px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #475569; }
+      .section-title { font: 700 22px Arial, sans-serif; fill: #0f172a; }
+      .label { font: 700 17px Arial, sans-serif; fill: #111827; }
+      .body { font: 400 14px Arial, sans-serif; fill: #334155; }
+      .small { font: 400 12px Arial, sans-serif; fill: #475569; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 8; }
+      .red { fill: #fee2e2; stroke: #ef4444; }
+      .amber { fill: #fef3c7; stroke: #f59e0b; }
+      .blue { fill: #dbeafe; stroke: #3b82f6; }
+      .green { fill: #dcfce7; stroke: #22c55e; }
+      .purple { fill: #ede9fe; stroke: #8b5cf6; }
+      .slate { fill: #e2e8f0; stroke: #64748b; }
+      .arrow { fill: none; stroke: #334155; stroke-width: 3; marker-end: url(#arrow); }
+      .soft-arrow { fill: none; stroke: #94a3b8; stroke-width: 2.5; marker-end: url(#arrowSoft); stroke-dasharray: 7 6; }
+      .pill { fill: #0f172a; rx: 6; }
+      .pill-text { font: 700 13px Arial, sans-serif; fill: #ffffff; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155" />
+    </marker>
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="980" />
+  <text class="title" x="64" y="72">カーパーツ赤字防止・コスト監視ループ</text>
+  <text class="subtitle" x="64" y="106">価格、送料、関税、Chatwork情報、AI候補を1つの「出品反映候補」に集め、外注さんが迷わない作業へ変える</text>
+
+  <rect class="card blue" x="70" y="170" width="250" height="140" />
+  <text class="label" x="96" y="210">1. リサーチ入力</text>
+  <text class="body" x="96" y="240">B: モノタロウURL</text>
+  <text class="body" x="96" y="263">C: 税別価格 / D: 入数</text>
+  <text class="body" x="96" y="286">H: eBay基準店舗URL</text>
+
+  <rect class="card purple" x="400" y="150" width="280" height="180" />
+  <text class="label" x="426" y="190">2. AI入力補助</text>
+  <text class="body" x="426" y="220">推定重量 / 梱包サイズ</text>
+  <text class="body" x="426" y="243">Shipping Policy候補</text>
+  <text class="body" x="426" y="266">HS/HTS候補</text>
+  <text class="small" x="426" y="296">AIは候補まで。確定は人間確認。</text>
+
+  <rect class="card green" x="760" y="170" width="270" height="140" />
+  <text class="label" x="786" y="210">3. 出品・価格設定</text>
+  <text class="body" x="786" y="240">基準セラー総額を下回らない</text>
+  <text class="body" x="786" y="263">利益率下限を確認</text>
+  <text class="body" x="786" y="286">Sellsta/eBay CSVへ接続</text>
+
+  <rect class="card red" x="1090" y="150" width="240" height="180" />
+  <text class="label" x="1116" y="190">4. 売れた後の実績</text>
+  <text class="body" x="1116" y="220">実送料</text>
+  <text class="body" x="1116" y="243">請求関税</text>
+  <text class="body" x="1116" y="266">返品/キャンセル理由</text>
+  <text class="small" x="1116" y="296">次回出品判断へ戻す</text>
+
+  <rect class="card amber" x="80" y="430" width="250" height="150" />
+  <text class="label" x="106" y="470">価格監視</text>
+  <text class="body" x="106" y="500">値上げ / 取扱終了</text>
+  <text class="body" x="106" y="523">在庫切れ / 納期未定</text>
+  <text class="small" x="106" y="552">2週間1周を設定で調整</text>
+
+  <rect class="card red" x="400" y="430" width="250" height="150" />
+  <text class="label" x="426" y="470">送料差額チェック</text>
+  <text class="body" x="426" y="500">推定送料 vs 実送料</text>
+  <text class="body" x="426" y="523">差額1,000円 / 20%以上</text>
+  <text class="small" x="426" y="552">Policy・重量推定を見直し</text>
+
+  <rect class="card amber" x="720" y="430" width="250" height="150" />
+  <text class="label" x="746" y="470">関税チェック</text>
+  <text class="body" x="746" y="500">HTS候補 / 想定関税額</text>
+  <text class="body" x="746" y="523">請求額との差額</text>
+  <text class="small" x="746" y="552">CBP/USITCを確認</text>
+
+  <rect class="card blue" x="1040" y="430" width="270" height="150" />
+  <text class="label" x="1066" y="470">Chatwork情報</text>
+  <text class="body" x="1066" y="500">品切れ / 値上げ / 廃番</text>
+  <text class="body" x="1066" y="523">品番候補を抽出</text>
+  <text class="small" x="1066" y="552">まず貼付、後でAPI/Webhook</text>
+
+  <rect class="card green" x="392" y="710" width="620" height="150" />
+  <text class="section-title" x="430" y="752">出品反映候補</text>
+  <text class="body" x="430" y="786">価格改定候補 / 出品停止候補 / Shipping Policy変更候補 / 仕入先確認候補</text>
+  <text class="body" x="430" y="814">候補を人間が確認してから、Sellsta/eBay更新CSVへ進める</text>
+  <rect class="pill" x="430" y="832" width="180" height="30" />
+  <text class="pill-text" x="450" y="852">自動反映しない</text>
+  <rect class="pill" x="628" y="832" width="214" height="30" />
+  <text class="pill-text" x="648" y="852">削除・不可逆操作なし</text>
+
+  <path class="arrow" d="M320 240 C345 240 370 240 400 240" />
+  <path class="arrow" d="M680 240 C710 240 730 240 760 240" />
+  <path class="arrow" d="M1030 240 C1050 240 1070 240 1090 240" />
+  <path class="soft-arrow" d="M1210 330 C1160 390 1120 410 1040 455" />
+
+  <path class="arrow" d="M205 310 C205 350 205 390 205 430" />
+  <path class="arrow" d="M540 330 C535 365 530 395 525 430" />
+  <path class="arrow" d="M895 310 C880 355 860 390 845 430" />
+  <path class="arrow" d="M1175 330 C1175 365 1175 395 1175 430" />
+
+  <path class="arrow" d="M330 505 C370 610 445 675 560 710" />
+  <path class="arrow" d="M525 580 C560 640 600 680 650 710" />
+  <path class="arrow" d="M845 580 C830 635 810 675 790 710" />
+  <path class="arrow" d="M1040 505 C980 615 910 680 840 710" />
+
+  <path class="soft-arrow" d="M710 860 C575 920 360 875 245 580" />
+  <text class="small" x="122" y="890">実績差額とChatwork情報を次回リサーチ・AI推定へ戻して精度を上げる</text>
+
+  <rect class="card slate" x="70" y="900" width="1260" height="48" />
+  <text class="small" x="96" y="930">安全原則: 価格改定、出品停止、Google Drive削除、認証情報保存は自動実行しない。候補表示と確認キューで赤字を先に止める。</text>
+</svg>

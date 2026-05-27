@@ -2,6 +2,48 @@
 
 最終更新: 2026-05-26
 
+## 2026-05-27 Fay追記: カーパーツ送料・関税・Chatwork情報反映MVP
+
+三神さんから、推定送料と実送料の差、請求関税の妥当性、Chatworkカーパーツコミュニティ内の品切れ/値上げ情報を自社出品リストへ反映する課題が追加された。
+
+作成・更新したもの:
+
+- `carparts-cost-control-roadmap.md`: 送料差額、関税、Chatwork情報、AI入力補助、出品反映候補まで含む短期改修ロードマップ。
+- `gas/carparts_cost_control_mvp.gs`: `コスト監視設定`、`送料差額チェック`、`関税チェック`、`Chatwork情報取込`、`AI入力補助`、`出品反映候補` を作るGAS MVP。
+- `visuals/carparts-cost-control-loop.svg`: 価格、送料、関税、Chatwork情報、AI候補を出品反映候補へ集約する図解。
+- `alf-carparts-cost-control-mvp-request.md`: Alf/ログイン済みGoogle Sheets環境で追加・10件テストを行う依頼パケット。
+- `carparts-research-operator-manual.md`: 送料、関税、Chatwork情報の扱いを追記。
+- `carparts-research-improvement-proposal.md`: 追加課題、リスク、短期改修の優先順位を反映。
+- `carparts-price-monitor-roadmap.md` / `carparts-price-monitor-mvp-implementation.md`: 追加MVPとの接続を追記。
+
+確認した公式情報:
+
+- Chatwork APIはメッセージ一覧取得が最大100件。`force=0` は差分取得。過去全件遡りではなく、定期差分取得またはWebhook前提。
+- US向け関税はUSITC HTSとCBP情報を基準に確認する。HTS分類と関税判断はAIで確定しない。
+- eBay Seller Hub ReportsはCSV/Excelで追加、修正、再出品、終了、レポートダウンロード/スケジュールが可能。
+- モノタロウは価格、仕様、取扱が事前通知なく変更/中止される可能性があるため、低頻度・手動メニュー・候補表示で運用する。
+
+実施済み検証:
+
+- `gas/carparts_cost_control_mvp.gs` 構文チェック済み。
+- 更新後の `gas/carparts_price_monitor_mvp.gs` 構文チェック済み。
+- `visuals/carparts-cost-control-loop.svg` XMLチェック済み。
+
+未実施:
+
+- Google Sheets本体への追加。
+- 実データ10件テスト。
+- Chatwork API連携。初期MVPは手動貼付解析。
+- 価格改定、出品停止、eBay/Sellsta直接反映。すべて候補表示まで。
+
+次アクション:
+
+1. ログイン済みGoogle Sheets環境またはAlfで、`gas/carparts_price_monitor_mvp.gs` 更新版と `gas/carparts_cost_control_mvp.gs` をApps Scriptへ追加する。
+2. `カーパーツコスト監視` メニューから `初期セットアップ` を実行する。
+3. `送料差額チェック`、`関税チェック`、`Chatwork情報取込` を各10件でテストする。
+4. `出品反映候補` に候補が集約されることを確認する。
+5. 結果を `delegated-tasks.md` と `handoff.md` に戻す。
+
 ## 2026-05-27 Fay追記: カーパーツリサーチ作業マニュアル・改善イラスト
 
 三神さんから、初めてのパートさんにも分かるカーパーツリサーチ工程、作業方法イラスト、AI導入/改善点/問題点/リスク/売上安定化/一括出品/コスト削減提案をまとめる依頼あり。
