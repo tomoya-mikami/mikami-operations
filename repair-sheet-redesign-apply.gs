@@ -18,6 +18,23 @@ function onOpen() {
     .addToUi();
 }
 
+function onEdit(e) {
+  if (!e || !e.range) return;
+  const range = e.range;
+  const sheet = range.getSheet();
+  const sheetName = sheet.getName();
+  if (!/^修理記録_新/.test(sheetName)) return;
+  if (range.getRow() < 4 || range.getColumn() !== 9) return;
+
+  const checked = range.getValue() === true || String(range.getValue()).toUpperCase() === 'TRUE';
+  const completedDateCell = sheet.getRange(range.getRow(), 10);
+  if (checked) {
+    completedDateCell.setValue(new Date()).setNumberFormat('yyyy-mm-dd');
+  } else {
+    completedDateCell.clearContent();
+  }
+}
+
 function createRepairManagementRedesign() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const source = ss.getSheetByName('修理記録一覧');
@@ -101,40 +118,40 @@ function buildRulesSheet_(sheet) {
 
 function buildRecordSheet_(sheet, source, rulesName) {
   sheet.setHiddenGridlines(true);
-  sheet.getRange('A1:V1').merge().setValue('修理記録')
+  sheet.getRange('A1:W1').merge().setValue('修理記録')
     .setFontSize(18).setFontWeight('bold').setFontColor('#243B53')
     .setBackground('#F7F4ED');
 
   sheet.getRange('A2:N2').merge().setValue('外注さん入力');
   sheet.getRange('O2:R2').merge().setValue('自動計算');
-  sheet.getRange('S2:V2').merge().setValue('社内管理');
+  sheet.getRange('S2:W2').merge().setValue('社内管理');
   sheet.getRange('A2:N2').setBackground('#2F80ED').setFontColor('#FFFFFF').setFontWeight('bold').setHorizontalAlignment('center');
   sheet.getRange('O2:R2').setBackground('#2F855A').setFontColor('#FFFFFF').setFontWeight('bold').setHorizontalAlignment('center');
-  sheet.getRange('S2:V2').setBackground('#6B7280').setFontColor('#FFFFFF').setFontWeight('bold').setHorizontalAlignment('center');
+  sheet.getRange('S2:W2').setBackground('#6B7280').setFontColor('#FFFFFF').setFontWeight('bold').setHorizontalAlignment('center');
 
   const headers = [
     '修理ID', '作業日', '返送日', '商品カテゴリ', '本体名称', '色', 'シリアル', '実作業時間(分)',
-    '修理完了', '修理後状態', '修理内容', '新品部品名', '部品代', '備考',
+    '修理完了', '修理完了日', '修理後状態', '修理内容', '新品部品名', '備考',
     '報酬計上月', '作業報酬', 'インセン対象', '要確認',
-    '仕入れ金額', '送料', '商品原価合計', '総コスト'
+    '部品代', '仕入れ金額', '送料', '商品原価合計', '総コスト'
   ];
   sheet.getRange(3, 1, 1, headers.length).setValues([headers])
     .setBackground('#243B53').setFontColor('#FFFFFF').setFontWeight('bold')
     .setHorizontalAlignment('center').setVerticalAlignment('middle').setWrap(true);
 
   sheet.setFrozenRows(3);
-  sheet.setColumnWidths(1, 22, 120);
-  const widths = [90, 95, 95, 110, 190, 80, 130, 120, 90, 110, 260, 190, 90, 260, 105, 105, 105, 240, 115, 95, 120, 105];
+  sheet.setColumnWidths(1, 23, 120);
+  const widths = [90, 95, 95, 110, 190, 80, 130, 120, 90, 105, 110, 260, 190, 260, 105, 105, 105, 240, 90, 115, 95, 120, 105];
   widths.forEach((w, idx) => sheet.setColumnWidth(idx + 1, w));
 
   const maxRows = 500;
   sheet.getRange(4, 1, maxRows - 3, 14).setBackground('#FFF9E8');
   sheet.getRange(4, 15, maxRows - 3, 4).setBackground('#DDF4EA');
-  sheet.getRange(4, 19, maxRows - 3, 2).setBackground('#E7E6E6');
-  sheet.getRange(4, 21, maxRows - 3, 2).setBackground('#DDF4EA');
+  sheet.getRange(4, 19, maxRows - 3, 3).setBackground('#E7E6E6');
+  sheet.getRange(4, 22, maxRows - 3, 2).setBackground('#DDF4EA');
   sheet.getRange(4, 18, maxRows - 3, 1).setBackground('#FCE4D6');
-  sheet.getRange(1, 1, maxRows, 22).setBorder(true, true, true, true, true, true, '#D5DAE3', SpreadsheetApp.BorderStyle.SOLID);
-  sheet.getRange(1, 1, maxRows, 22).setWrap(true).setVerticalAlignment('middle');
+  sheet.getRange(1, 1, maxRows, 23).setBorder(true, true, true, true, true, true, '#D5DAE3', SpreadsheetApp.BorderStyle.SOLID);
+  sheet.getRange(1, 1, maxRows, 23).setWrap(true).setVerticalAlignment('middle');
 
   const sourceRows = source.getLastRow();
   if (sourceRows >= 4) {
@@ -168,6 +185,7 @@ function buildRecordSheet_(sheet, source, rulesName) {
         if (val) parts.push(String(val));
       });
 
+      const partCost = source.getRange(r, 32).getValue();
       output.push([
         repairId,
         source.getRange(r, 2).getValue(),
@@ -179,41 +197,49 @@ function buildRecordSheet_(sheet, source, rulesName) {
         source.getRange(r, 6).getValue(),
         '',
         '',
+        '',
         tasks.join('、'),
         parts.join('、'),
-        source.getRange(r, 32).getValue(),
         source.getRange(r, 37).getValue(),
+        '',
+        '',
+        '',
+        '',
+        partCost,
+        '',
+        '',
+        '',
+        '',
       ]);
     }
     if (output.length) {
-      sheet.getRange(4, 1, output.length, 14).setValues(output);
+      sheet.getRange(4, 1, output.length, 23).setValues(output);
     }
   }
 
   const rules = quoteSheetName_(rulesName);
   for (let r = 4; r <= maxRows; r++) {
     sheet.getRange(r, 15).setFormula(`=IF($C${r}="","",DATE(YEAR($C${r}),MONTH($C${r}),1))`);
-    sheet.getRange(r, 16).setFormula(`=IF($C${r}="","",IFS($J${r}="ジャンク",MIN($H${r}/60*${rules}!$B$5,${rules}!$B$7),OR($J${r}="動作確認済み",$J${r}="ワケあり",$I${r}=TRUE,$I${r}="TRUE"),MIN($H${r}/60*${rules}!$B$5,${rules}!$B$6),TRUE,0))`);
-    sheet.getRange(r, 17).setFormula(`=AND($C${r}<>"",OR($I${r}=TRUE,$I${r}="TRUE"),$J${r}="動作確認済み")`);
-    sheet.getRange(r, 18).setFormula(`=TEXTJOIN(", ",TRUE,IF(AND(COUNTA($A${r}:$N${r})>0,$C${r}=""),"返送日なし",""),IF(AND($C${r}<>"",$J${r}=""),"修理後状態なし",""),IF(AND($J${r}="動作確認済み",NOT(OR($I${r}=TRUE,$I${r}="TRUE"))),"修理完了未チェック",""),IF(AND($C${r}<>"",$P${r}=0),"報酬0",""))`);
-    sheet.getRange(r, 21).setFormula(`=IF(COUNTA($A${r}:$N${r})=0,"",SUM($M${r},$S${r},$T${r}))`);
-    sheet.getRange(r, 22).setFormula(`=IF($U${r}="","",$U${r}+$P${r})`);
+    sheet.getRange(r, 16).setFormula(`=IF($C${r}="","",IFS($K${r}="ジャンク",MIN($H${r}/60*${rules}!$B$5,${rules}!$B$7),OR($K${r}="動作確認済み",$K${r}="ワケあり",$I${r}=TRUE,$I${r}="TRUE",$J${r}<>""),MIN($H${r}/60*${rules}!$B$5,${rules}!$B$6),TRUE,0))`);
+    sheet.getRange(r, 17).setFormula(`=AND($C${r}<>"",OR($I${r}=TRUE,$I${r}="TRUE",$J${r}<>""),$K${r}="動作確認済み")`);
+    sheet.getRange(r, 18).setFormula(`=TEXTJOIN(", ",TRUE,IF(AND(COUNTA($A${r}:$N${r})>0,$C${r}=""),"返送日なし",""),IF(AND($C${r}<>"",$K${r}=""),"修理後状態なし",""),IF(AND($K${r}="動作確認済み",NOT(OR($I${r}=TRUE,$I${r}="TRUE",$J${r}<>""))),"修理完了未チェック",""),IF(AND($C${r}<>"",$P${r}=0),"報酬0",""))`);
+    sheet.getRange(r, 22).setFormula(`=IF(COUNTA($A${r}:$N${r})=0,"",SUM($S${r},$T${r},$U${r}))`);
+    sheet.getRange(r, 23).setFormula(`=IF($V${r}="","",$V${r}+$P${r})`);
   }
 
   sheet.getRange('B4:C500').setNumberFormat('yyyy-mm-dd');
+  sheet.getRange('J4:J500').setNumberFormat('yyyy-mm-dd');
   sheet.getRange('O4:O500').setNumberFormat('yyyy-mm');
-  sheet.getRange('M4:M500').setNumberFormat('#,##0');
   sheet.getRange('P4:P500').setNumberFormat('#,##0');
-  sheet.getRange('S4:V500').setNumberFormat('#,##0');
+  sheet.getRange('S4:W500').setNumberFormat('#,##0');
 
   const categoryRule = SpreadsheetApp.newDataValidation().requireValueInList(['ゲーム機', 'カーオーディオ', 'その他'], true).setAllowInvalid(false).build();
-  const boolRule = SpreadsheetApp.newDataValidation().requireValueInList(['TRUE', 'FALSE'], true).setAllowInvalid(false).build();
   const stateRule = SpreadsheetApp.newDataValidation().requireValueInList(['動作確認済み', 'ワケあり', 'ジャンク'], true).setAllowInvalid(false).build();
   sheet.getRange('D4:D500').setDataValidation(categoryRule);
-  sheet.getRange('I4:I500').setDataValidation(boolRule);
-  sheet.getRange('J4:J500').setDataValidation(stateRule);
+  sheet.getRange('I4:I500').insertCheckboxes();
+  sheet.getRange('K4:K500').setDataValidation(stateRule);
 
-  sheet.getRange('A3:V500').createFilter();
+  sheet.getRange('A3:W500').createFilter();
 }
 
 function buildSummarySheet_(sheet, recordName, rulesName) {
@@ -243,19 +269,19 @@ function buildSummarySheet_(sheet, recordName, rulesName) {
     const end = `"<"&EDATE($A${r},1)`;
     const dateRange = `${rec}!$C$4:$C$500`;
     sheet.getRange(r, 2).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end})`);
-    sheet.getRange(r, 3).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$J$4:$J$500,"動作確認済み")`);
-    sheet.getRange(r, 4).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$J$4:$J$500,"ワケあり")`);
-    sheet.getRange(r, 5).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$J$4:$J$500,"ジャンク")`);
+    sheet.getRange(r, 3).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$K$4:$K$500,"動作確認済み")`);
+    sheet.getRange(r, 4).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$K$4:$K$500,"ワケあり")`);
+    sheet.getRange(r, 5).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$K$4:$K$500,"ジャンク")`);
     sheet.getRange(r, 6).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$Q$4:$Q$500,TRUE)`);
     sheet.getRange(r, 7).setFormula(`=SUMIFS(${rec}!$H$4:$H$500,${dateRange},${start},${dateRange},${end})`);
     sheet.getRange(r, 8).setFormula(`=SUMIFS(${rec}!$P$4:$P$500,${dateRange},${start},${dateRange},${end})`);
     sheet.getRange(r, 9).setFormula(`=QUOTIENT(F${r},${rules}!$B$8)*${rules}!$B$9`);
     sheet.getRange(r, 10).setFormula(`=H${r}+I${r}`);
-    sheet.getRange(r, 11).setFormula(`=SUMIFS(${rec}!$M$4:$M$500,${dateRange},${start},${dateRange},${end})`);
-    sheet.getRange(r, 12).setFormula(`=SUMIFS(${rec}!$S$4:$S$500,${dateRange},${start},${dateRange},${end})`);
-    sheet.getRange(r, 13).setFormula(`=SUMIFS(${rec}!$T$4:$T$500,${dateRange},${start},${dateRange},${end})`);
-    sheet.getRange(r, 14).setFormula(`=SUMIFS(${rec}!$U$4:$U$500,${dateRange},${start},${dateRange},${end})`);
-    sheet.getRange(r, 15).setFormula(`=SUMIFS(${rec}!$V$4:$V$500,${dateRange},${start},${dateRange},${end})`);
+    sheet.getRange(r, 11).setFormula(`=SUMIFS(${rec}!$S$4:$S$500,${dateRange},${start},${dateRange},${end})`);
+    sheet.getRange(r, 12).setFormula(`=SUMIFS(${rec}!$T$4:$T$500,${dateRange},${start},${dateRange},${end})`);
+    sheet.getRange(r, 13).setFormula(`=SUMIFS(${rec}!$U$4:$U$500,${dateRange},${start},${dateRange},${end})`);
+    sheet.getRange(r, 14).setFormula(`=SUMIFS(${rec}!$V$4:$V$500,${dateRange},${start},${dateRange},${end})`);
+    sheet.getRange(r, 15).setFormula(`=SUMIFS(${rec}!$W$4:$W$500,${dateRange},${start},${dateRange},${end})`);
     sheet.getRange(r, 16).setFormula(`=COUNTIFS(${dateRange},${start},${dateRange},${end},${rec}!$R$4:$R$500,"<>")`);
   }
 
@@ -301,4 +327,3 @@ function makeUniqueSheetName_(ss, baseName) {
 function quoteSheetName_(name) {
   return `'${String(name).replace(/'/g, "''")}'`;
 }
-
